@@ -1,0 +1,41 @@
+I'll work through this systematically, scoring companies across all four layers and adjusting for sector norms.
+
+1. **ALL** — Trailing PE 5.4 and EV/EBITDA 4.6 are the cheapest in the dataset; PEG 0.45 and FCF yield 16.6% confirm deep value. Earnings grew 103%, operating margin is 29%, ROE 39.5%, and debt-to-equity only 0.25 — exceptional quality for a financial with a 2.1% dividend.
+
+2. **ADBE** — Trailing PE 14.2 and forward PE 9.2 are remarkably cheap for software; PEG 0.69, FCF yield 9.4%. Gross margin 89.4%, operating margin 38.8%, ROE 58.8%, and ROA 18.9% represent best-in-class quality, with debt-to-equity a modest 0.58.
+
+3. **PYPL** — PE 8.4 trailing / 7.8 forward with PEG 0.72 and FCF yield 7.7% make this deeply cheap for fintech. Earnings grew 39.4%, operating margin 17.5%, ROE 25.7%, debt-to-equity 0.61 — strong growth and quality at a value price with a 1.2% dividend.
+
+4. **GILD** — PEG 0.39 is among the lowest in the dataset, reflecting 23.4% earnings growth against PE 20.6. Operating margin 37.4%, gross margin 78.8%, ROE 40.7%, ROA 12.5%, and a 2.4% dividend yield make this a rare quality-at-value pharma name.
+
+5. **UHS** — PE 7.7, forward PE 6.9, PS 0.62, EV/EBITDA 6.1 — cheap across every valuation metric for healthcare. Earnings grew 42.7% on 9.1% revenue growth, ROE 21.3%, ROA 8.3%, debt-to-equity 0.70.
+
+6. **HIG** — PE 10.2, EV/EBITDA 7.3, FCF yield 15.3% with earnings growth of 38.2%. Operating margin 20%, ROE 21.7%, debt-to-equity just 0.24 with current ratio 1.84 — a well-capitalized insurer generating strong cash at a cheap price.
+
+7. **INCY** — PEG 0.35 (lowest meaningful PEG), 27.8% revenue growth and 43.6% earnings growth at PE 15.0. Operating margin 25.6%, profit margin 25.0%, ROE 29.9%, ROA 13.6%, current ratio 3.3 — outstanding growth-at-a-reasonable-price pharma.
+
+8. **BMY** — Forward PE 9.7, EV/EBITDA 8.3, FCF yield 9.2% with trailing earnings growth of 1,392% (recovery). Operating margin 28.2%, gross margin 72.6%, ROE 40.4%, ROA 10.3%, and a 4.2% dividend yield — strong pharma quality with income at a recovery valuation.
+
+9. **GEN** — Forward PE 6.6, PEG 0.46, FCF yield 11.3% with 25.8% revenue growth and 20.1% earnings growth. Operating margin 35.8%, gross margin 78.8%, ROE 26.9%; debt-to-equity 3.6 is elevated but margins and cash generation are robust.
+
+10. **FIS** — Forward PE 6.7, PEG 0.26 (very low), FCF yield 7.9% with 88.1% earnings growth on 8.2% revenue growth. Operating margin 24.6%, debt-to-equity 0.96, and a 3.5% dividend — a clear earnings-recovery story at a deeply discounted forward valuation.
+
+11. **TRV** — PE 10.7, EV/EBITDA 7.5, FCF yield 18.5% with 23.4% earnings growth. Operating margin 25.9%, ROE 20.7%, debt-to-equity 0.29 — a conservatively capitalized insurer throwing off substantial free cash with a 1.5% dividend.
+
+12. **DECK** — PE 14.0, EV/EBITDA 9.0, PEG 1.34 with 11% earnings growth. Operating margin 31.4%, gross margin 57.5%, ROE 39.7%, ROA 19.9%, debt-to-equity just 0.13 — among the highest quality profiles in the dataset at a cheap-for-retail valuation.
+
+13. **LULU** — PE 11.7, EV/EBITDA 6.6, PEG 0.74, FCF yield 4.5%. Operating margin 22.3%, gross margin 56.6%, ROE 34.0%, ROA 17.2%, debt-to-equity 0.36 — premium quality and balance-sheet strength at a cyclical-like valuation; trailing growth is flat but forward-implied growth supports the low PEG.
+
+14. **FSLR** — PE 13.7, forward PE 8.0, PEG 0.50 with 32.3% earnings growth and 11.1% revenue growth. Operating margin 32.6%, profit margin 29.3%, ROE 17.5%, ROA 7.8% — cheap tech-manufacturer with strong profitability; debt-to-equity 6.9 is a notable risk but current ratio 2.7 provides liquidity comfort.
+
+15. **AMP** — PE 12.0, forward PE 9.3, FCF yield 8.9%. Operating margin 35.4%, ROE 60.5% — the highest ROE among financials with modest leverage (debt-to-equity 0.58); a 1.5% dividend adds income with revenue growing 8.6%.
+
+16. **ELV** — PE 11.9, forward PE 10.2, PS 0.33 (extremely cheap), EV/EBITDA 7.0 with 9.5% revenue growth and 36.3% earnings growth. Margins are low (typical for managed care), but ROE 13.3%, debt-to-equity 0.74, and a 2.3% dividend round out a cheap, growing health insurer.
+
+17. **MU** — Forward PE 3.7, trailing PE 17.3, PEG 0.21 with 196% revenue growth and 756% earnings growth. Operating margin 67.6%, ROA 20.1%, debt-to-equity just 0.15 — even acknowledging semiconductor cyclicality, the current profitability and balance-sheet strength at this valuation are remarkable.
+
+18. **CHTR** — PE 6.1, forward PE 4.6, PEG 0.36, PS 0.51, FCF yield 9.8%. Operating margin 24.7%, gross margin 55.3%, ROE 28.7% — deeply cheap on every valuation metric; debt-to-equity 4.8 is high but expected for telecom infrastructure, and cash generation is strong.
+
+19. **CPAY** — Forward PE 9.9, PEG 0.75, FCF yield 9.2% with 20.7% revenue growth. Operating margin 57.1% — one of the highest in the dataset — gross margin 79.7%, ROE 29.1%; a high-margin payments processor at a cheap forward multiple.
+
+20. **CI** — PE 12.2, forward PE 8.1, PS 0.26 (near-lowest in dataset), EV/EBITDA 7.8, PEG 0.78, FCF yield 13.5% with 10.4% revenue growth. Low margins are structural for health insurers; ROE 15.1%, debt-to-equity 0.75, and a 2.3% dividend make this a cheap, growing, adequately capitalized managed-care name.

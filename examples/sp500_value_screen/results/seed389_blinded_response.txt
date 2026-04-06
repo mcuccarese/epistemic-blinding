@@ -1,0 +1,39 @@
+1. **Company_121** — Trailing PE of 5.4 and EV/EBITDA of 4.6 make it the cheapest stock in the universe; PEG of 0.45 with 103% earnings growth, 29% operating margin, 39.5% ROE, FCF yield of 16.6%, and D/E of just 0.25 round out an exceptional profile across all four layers.
+
+2. **Company_012** — At 14.2x trailing / 9.2x forward PE with a PEG of 0.69, this is deeply discounted for a tech company running 38.8% operating margins, 89.4% gross margins, 58.8% ROE, 18.9% ROA, and a 9.4% FCF yield — elite quality at a value price.
+
+3. **Company_006** — PEG of 0.39 is the second-lowest in the dataset for a profitable company; 37.4% operating margin, 78.8% gross margin, 40.7% ROE, 12.5% ROA, 23.4% earnings growth, and a 2.35% dividend deliver quality and growth in healthcare at a reasonable 14.5x forward PE.
+
+4. **Company_011** — Lowest PEG in the dataset at 0.35, powered by 27.8% revenue growth and 43.6% earnings growth; 25.6% operating margin, 25% profit margin, 29.9% ROE, and 13.6% ROA at only 15x trailing PE — a rare growth-at-a-reasonable-price healthcare name.
+
+5. **Company_156** — PE of 8.4 and forward PE of 7.8 with EV/EBITDA of 6.6; PEG of 0.72 backed by 39.4% earnings growth, 25.7% ROE, 15.8% profit margin, and conservative 0.61 D/E — cheap financial with both growth and discipline.
+
+6. **Company_371** — Trading at 7.7x trailing / 6.9x forward PE with EV/EBITDA of 6.1, this healthcare company delivers 42.7% earnings growth, 9.1% revenue growth, 21.3% ROE, 8.3% ROA, and 0.7 D/E — a deep value healthcare play with genuine earnings momentum.
+
+7. **Company_330** — Forward PE of 6.6 with a PEG of 0.46, 25.8% revenue growth, 20.1% earnings growth, 35.8% operating margin, 78.8% gross margin, and an 11.3% FCF yield — extremely cheap for a high-margin, fast-growing tech company paying a 2.65% dividend.
+
+8. **Company_037** — PE of 14.0 with 31.4% operating margin, 39.7% ROE, 19.9% ROA, 57.5% gross margin, and D/E of just 0.13; positive revenue (7.1%) and earnings (11%) growth at a reasonable valuation with near-zero leverage — best risk-adjusted quality in consumer cyclical.
+
+9. **Company_116** — PE of 13.7 and forward PE of 8.0 with PEG of 0.50; 32.3% earnings growth, 32.6% operating margin, 29.3% profit margin, and EV/EBITDA of 8.8 — cheap and highly profitable tech, though D/E of 6.9 warrants monitoring.
+
+10. **Company_127** — PE of 10.2 with 15.3% FCF yield, 38.2% earnings growth, 20% operating margin, 21.7% ROE, and D/E of only 0.24; a conservatively financed financial delivering strong cash returns and earnings acceleration.
+
+11. **Company_374** — Forward PE of 9.9 and PEG of 0.75 with a 57.1% operating margin (top-tier even for tech), 79.7% gross margin, 20.7% revenue growth, 9.2% FCF yield, and 29.1% ROE — exceptional margin profile at a compelling forward valuation.
+
+12. **Company_068** — Forward PE of 9.7, EV/EBITDA of 8.3, and 9.2% FCF yield; the 1,392% earnings growth signals recovery from a depressed base, supported by 28.2% operating margin, 72.6% gross margin, 40.4% ROE, and a 4.23% dividend yield.
+
+13. **Company_105** — At 17.3x trailing PE with 70.5% gross margin, 25.2% operating margin, 112.6% ROE, 10.3% ROA, and a 2.0% dividend; PEG of 1.18 with 16% earnings growth — a high-return tech compounder still priced modestly.
+
+14. **Company_437** — PE of 6.1 and forward PE of 4.6 make it the cheapest communication-services stock in the dataset; PEG of 0.36, 24.7% operating margin, 55.3% gross margin, 28.7% ROE, and 9.8% FCF yield — extraordinarily cheap for a solidly profitable business, though high D/E (4.8) and flat growth temper upside.
+
+15. **Company_388** — PE of 11.7, EV/EBITDA of 6.6, and PEG of 0.74 in consumer cyclical; 22.3% operating margin, 56.6% gross margin, 34% ROE, 17.2% ROA, and D/E of just 0.36 — excellent quality and capital efficiency at a bargain price despite near-term earnings softness.
+
+16. **Company_318** — PE of 8.7 and forward PE of 8.1 with P/S of 0.69 and EV/EBITDA of 7.8; 44.6% earnings growth, 27.7% ROE, and 6.8% FCF yield — the cheapest industrial in the dataset with strong earnings momentum.
+
+17. **Company_499** — PE of 16.5, FCF yield of 9.8%, D/E of 0.25, ROE of 24.8%, ROA of 11.2%, and a 3.24% dividend yield in tech; a well-balanced value-and-income technology holding with a fortress balance sheet and steady (8.3%) revenue growth.
+
+18. **Company_446** — PE of 10.7 with an 18.5% FCF yield, 23.4% earnings growth, 25.9% operating margin, 20.7% ROE, and D/E of 0.29; a financial generating outsized free cash flow relative to its market price with disciplined leverage.
+
+19. **Company_380** — PE of 17.2 and forward PE of 12.1 with 15.6% revenue growth and 74.4% earnings growth; PEG of 1.12, P/S of 1.04, D/E of 0.54, and FCF yield of 5.6% — the strongest growth profile among cheap industrials with conservative leverage.
+
+20. **Company_372** — FCF yield of 37.2% is by far the highest in the entire dataset, with 31.2% revenue growth, forward PE of 6.4, P/B near 1.0, EV/EBITDA of 7.7, and a 5.6% dividend yield; a financial delivering massive cash generation and top-line growth at a deep discount, though modest margins (5.8% profit margin) warrant attention.

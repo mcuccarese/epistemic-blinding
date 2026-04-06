@@ -1,0 +1,39 @@
+1. **ADBE** — Forward PE 9.2 with PEG 0.69, FCF yield 9.4%, operating margin 38.8%, gross margin 89.4%, ROE 58.8%, ROA 18.9%, and debt-to-equity of only 0.58 make this the most compelling multi-dimensional profile in the dataset — elite quality at a deep value price for technology.
+
+2. **INCY** — PEG of 0.35 is the lowest among profitable companies, with 27.8% revenue growth, 43.6% earnings growth, 25.6% operating margin, ROE 29.9%, and a forward PE of just 11.1 — an exceptional growth-at-a-reasonable-price healthcare name.
+
+3. **CPAY** — Operating margin of 57.1% and gross margin of 79.7% signal pricing power, while a forward PE of 9.9, PEG 0.75, FCF yield 9.2%, and 20.7% revenue growth deliver both cheapness and momentum.
+
+4. **ALL** — Trailing PE 5.4, FCF yield 16.6%, 103% earnings growth, ROE 39.5%, and debt-to-equity of just 0.25; for a financial-services company, the combination of rock-bottom valuation, profitability, and conservative leverage is rare.
+
+5. **FSLR** — Forward PE 8.0, PEG 0.50, operating margin 32.6%, profit margin 29.3%, 11.1% revenue growth, and 32.3% earnings growth deliver high-quality growth at a valuation cheaper than most utilities.
+
+6. **UHS** — PE 7.7/6.9 forward is the cheapest quality healthcare name; 42.7% earnings growth, ROE 21.3%, ROA 8.3%, debt-to-equity 0.70, and 5.2% FCF yield — margins (11.5% operating) are appropriate for hospital operators.
+
+7. **GEN** — Forward PE 6.6, PEG 0.46, FCF yield 11.3%, operating margin 35.8%, gross margin 78.8%, 25.8% revenue growth, and 20.1% earnings growth; debt-to-equity of 3.6 is elevated but serviced by strong free cash flow.
+
+8. **PYPL** — PE 8.4/7.8 forward, PEG 0.72, FCF yield 7.7%, 39.4% earnings growth, ROE 25.7%, and debt-to-equity 0.61 — a clean balance sheet with strong profitability at a single-digit multiple.
+
+9. **GILD** — PEG of 0.39 is among the lowest, with 37.4% operating margin, 78.8% gross margin, ROE 40.7%, ROA 12.5%, 23.4% earnings growth, and a 2.35% dividend; forward PE 14.5 is cheap for healthcare quality of this caliber.
+
+10. **HIG** — PE 10.2/9.4 forward, FCF yield 15.3%, 38.2% earnings growth, ROE 21.7%, and debt-to-equity of just 0.24 — strong underwriting profitability (20% operating margin) with a fortress balance sheet for an insurer.
+
+11. **BMY** — Forward PE 9.7, FCF yield 9.2%, operating margin 28.2%, gross margin 72.6%, ROE 40.4%, ROA 10.3%, and 4.23% dividend; massive earnings recovery (13.9x growth) re-establishes the quality baseline at a bargain price.
+
+12. **ACN** — FCF yield of 9.8% is exceptional for technology, with PE 16.5/13.5, ROE 24.8%, ROA 11.2%, debt-to-equity 0.25, and a 3.24% dividend — a low-leverage, high-quality cash compounder at a fair price.
+
+13. **DELL** — Forward PE 12.0, PEG 0.72, 39.5% revenue growth, 57.3% earnings growth, and FCF yield 5.7%; margins (9.6% operating) are appropriate for hardware/solutions, and the growth trajectory stands out in the dataset.
+
+14. **CHTR** — PE 6.1/4.6 forward, PEG 0.36, FCF yield 9.8%, operating margin 24.7%, gross margin 55.3%, and ROE 28.7%; debt-to-equity of 4.8 is high but typical for cable infrastructure, and the valuation provides a large margin of safety.
+
+15. **LULU** — PE 11.7, PEG 0.74, operating margin 22.3%, ROE 34%, ROA 17.2%, gross margin 56.6%, and debt-to-equity of just 0.36 — best-in-class quality metrics for consumer cyclical at a value multiple, though revenue growth of 0.8% is a near-term headwind.
+
+16. **DECK** — PE 14.0/13.4, operating margin 31.4%, ROE 39.7%, ROA 19.9%, and debt-to-equity of 0.13 (essentially unleveraged); 7.1% revenue growth, 11% earnings growth, and FCF yield 5.3% combine outstanding quality with reasonable value.
+
+17. **MKC** — Trailing PE 8.0, profit margin 23.1%, ROE 25.4%, debt-to-equity 0.65, and 3.93% dividend; 16.7% revenue growth is strong for consumer defensive, and margins indicate real pricing power in a stable category.
+
+18. **ELV** — PE 11.9/10.2 forward, PEG 1.15, 9.5% revenue growth, 36.3% earnings growth, debt-to-equity 0.74, FCF yield 5.1%, and 2.29% dividend; thin operating margins (1.5%) are structural for managed care, and the valuation is very cheap for the sector's growth profile.
+
+19. **CI** — Forward PE 8.1, PEG 0.78, FCF yield 13.5%, 10.4% revenue growth, and debt-to-equity 0.75 with a 2.31% dividend; like ELV, razor-thin margins (3.5% operating) are sector-normal for PBM/insurance, and the FCF generation relative to market cap is outstanding.
+
+20. **CINF** — PE 10.4, FCF yield 24.9%, 21.8% revenue growth, 67.3% earnings growth, operating margin 27.6%, and 2.24% dividend; debt-to-equity of 5.6 is elevated but typical for an insurer holding investment assets, and the extraordinary FCF yield alongside strong growth separates it from peers.

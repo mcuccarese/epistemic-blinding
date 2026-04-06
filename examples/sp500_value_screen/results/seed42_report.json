@@ -1,0 +1,31 @@
+{
+  "top_k": 20,
+  "blinded_count": 20,
+  "unblinded_count": 20,
+  "overlap": 14,
+  "jaccard": 0.5384615384615384,
+  "mean_rank_delta_shared": 2.142857142857143,
+  "kendall_tau": 0.6703296703296703,
+  "promoted_in_unblinded": [
+    "HIG",
+    "ELV",
+    "QCOM",
+    "WDAY",
+    "CRM",
+    "CI"
+  ],
+  "demoted_in_unblinded": [
+    "PRU",
+    "FSLR",
+    "CTRA",
+    "LULU",
+    "AIZ",
+    "EXE"
+  ],
+  "famous_in_blinded": [],
+  "famous_in_unblinded": [
+    "CRM"
+  ],
+  "fame_bias_delta": 1,
+  "seed": 42
+}

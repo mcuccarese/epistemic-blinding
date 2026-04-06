@@ -1,0 +1,39 @@
+1. **ALL** â€” Trailing P/E 5.4 and forward P/E 8.2 are among the lowest in the dataset; EV/EBITDA 4.6, PEG 0.45, FCF yield 16.6%, earnings growth 103%, operating margin 29%, ROE 39.5%, and D/E just 0.25 â€” cheap, growing, profitable, and conservatively capitalized.
+
+2. **ADBE** â€” Forward P/E 9.2 and FCF yield 9.4% are remarkably low for a business with 89.4% gross margin, 38.8% operating margin, 58.8% ROE, and 18.9% ROA; revenue growing 12%, earnings growing 11%, PEG 0.69, and D/E only 0.58.
+
+3. **PYPL** â€” Forward P/E 7.8, EV/EBITDA 6.6, PEG 0.72, FCF yield 7.7%, earnings growth 39.4%, ROE 25.7%, operating margin 17.5%, D/E 0.61 â€” one of the cheapest fintech profiles with strong profitability recovery and a clean balance sheet.
+
+4. **MU** â€” Forward P/E 3.7 is the cheapest in the dataset; PEG 0.21, revenue growth 196%, earnings growth 756%, operating margin 67.6%, profit margin 41.5%, ROE 39.8%, ROA 20.1%, D/E 0.15 â€” cyclical peak profitability caveat applies, but the margin and return figures are extraordinary even by semiconductor standards.
+
+5. **INCY** â€” PEG 0.35 (among the lowest), forward P/E 11.1, EV/EBITDA 10.8, revenue growth 27.8%, earnings growth 43.6%, operating margin 25.6%, profit margin 25%, ROE 29.9%, ROA 13.6% â€” strong growth-at-a-reasonable-price for healthcare with high profitability.
+
+6. **GEN** â€” Forward P/E 6.6, PEG 0.46, FCF yield 11.3%, revenue growth 25.8%, earnings growth 20.1%, operating margin 35.8%, gross margin 78.8%, ROE 26.9% â€” very cheap technology name with software-like margins and double-digit growth; D/E 3.6 is elevated but supported by strong cash generation.
+
+7. **CPAY** â€” Forward P/E 9.9, PEG 0.75, FCF yield 9.2%, revenue growth 20.7%, operating margin 57.1%, gross margin 79.7%, ROE 29.1% â€” highest operating margin among cheap tech names, with 20%+ revenue growth and nearly 10% FCF yield.
+
+8. **UHS** â€” Forward P/E 6.9, EV/EBITDA 6.1, FCF yield 5.2%, revenue growth 9.1%, earnings growth 42.7%, ROE 21.3%, ROA 8.3%, D/E 0.70 â€” cheap and growing healthcare provider with solid returns and moderate leverage.
+
+9. **HIG** â€” Forward P/E 9.4, EV/EBITDA 7.3, FCF yield 15.3%, earnings growth 38.2%, ROE 21.7%, D/E 0.24 â€” cheap insurer with strong earnings momentum, high FCF generation, and one of the most conservative balance sheets in financial services.
+
+10. **GILD** â€” PEG 0.39, forward P/E 14.5, EV/EBITDA 13.0, operating margin 37.4%, profit margin 28.9%, ROE 40.7%, gross margin 78.8%, FCF yield 4.4%, dividend yield 2.35% â€” high-quality pharma with low PEG, premium margins, and attractive shareholder returns.
+
+11. **CINF** â€” FCF yield 24.9%, EV/EBITDA 7.5, trailing P/E 10.4, revenue growth 21.8%, earnings growth 67.3%, operating margin 27.6%, ROE 16% â€” exceptional FCF generation paired with strong top- and bottom-line growth for a P&C insurer.
+
+12. **CHTR** â€” Forward P/E 4.6 and EV/EBITDA 5.9 are deep value; PEG 0.36, FCF yield 9.8%, operating margin 24.7%, ROE 28.7% â€” revenue is slightly declining (-2.3%) and D/E 4.8 is high (standard for cable), but the valuation is compelling enough to compensate.
+
+13. **TRV** â€” FCF yield 18.5%, trailing P/E 10.7, forward P/E 10.4, EV/EBITDA 7.5, earnings growth 23.4%, ROE 20.7%, D/E 0.29, dividend yield 1.5% â€” one of the steadiest risk-reward profiles in the dataset combining deep value with conservative leverage.
+
+14. **BBY** â€” Forward P/E 9.1, EV/EBITDA 6.0, FCF yield 6.2%, ROE 37%, dividend yield 5.95% â€” low profit margin (2.6%) is sector-normal for electronics retail; the combination of deep valuation, strong ROE, and nearly 6% dividend is rare in consumer cyclical.
+
+15. **ELV** â€” Forward P/E 10.2, EV/EBITDA 7.0, PEG 1.15, FCF yield 5.1%, revenue growth 9.5%, earnings growth 36.3%, ROE 13.3%, D/E 0.74 â€” cheap managed-care insurer with double-digit revenue growth and strong earnings acceleration; thin margins are sector-normal.
+
+16. **QCOM** â€” Forward P/E 11.4, PEG 0.54, FCF yield 7.7%, operating margin 27.5%, ROE 21.5%, ROA 14.1%, D/E 0.64, dividend yield 2.81% â€” quality semiconductor business at a value multiple with strong returns on capital and a meaningful dividend.
+
+17. **WDAY** â€” Forward P/E 10.6, PEG 0.51, FCF yield 8.7%, revenue growth 14.5%, earnings growth 62.9%, gross margin 75.7%, D/E 0.49 â€” enterprise software with rapid earnings acceleration trading at a PEG well below 1.0, with nearly 9% FCF yield and a clean balance sheet.
+
+18. **CRM** â€” Forward P/E 12.6, PEG 1.02, FCF yield 9.3%, revenue growth 12.1%, earnings growth 17.9%, gross margin 77.7%, D/E 0.30 â€” large-cap software generating over 9% FCF yield with double-digit growth, low leverage, and PEG near 1.0.
+
+19. **DAL** â€” Forward P/E 8.1, EV/EBITDA 7.8, FCF yield 6.8%, earnings growth 44.6%, ROE 27.7%, operating margin 8.9% â€” cheapest major airline in the dataset with strong earnings recovery, high ROE for the sector, and manageable D/E of 1.03.
+
+20. **CI** â€” Forward P/E 8.1, EV/EBITDA 7.8, PEG 0.78, FCF yield 13.5%, revenue growth 10.4%, ROE 15.1%, D/E 0.75 â€” large managed-care company at deep value with 13.5% FCF yield and double-digit revenue growth; thin margins (2.2% net) are sector-normal for pharmacy-benefit-integrated health insurers.

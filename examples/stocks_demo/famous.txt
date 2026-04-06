@@ -1,0 +1,12 @@
+# Famous large-cap tickers in this demo — used by compare.py
+# to compute fame-bias metrics. One ticker per line.
+AAPL
+TSLA
+NVDA
+MSFT
+META
+AMZN
+GOOGL
+JPM
+BRK
+V

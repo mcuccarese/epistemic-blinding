@@ -1,0 +1,58 @@
+# Epistemic blinding demo — equity value ranking
+#
+# This config demonstrates the simplest single-dataset case. We have 20
+# companies with synthetic fundamentals and we want an LLM to pick the
+# top 10 undervalued names. Half the tickers are real large-caps the
+# model will recognize; half are fictional. The synthetic fundamentals
+# are designed so that the fictional tickers look systematically better
+# on value metrics, which sets up a clean A/B test: a blinded model
+# should pick them; an unblinded model will boost the famous tickers.
+
+task:
+  system_prompt: |
+    You are a disciplined value-oriented equity analyst. You rank
+    companies strictly by the fundamentals in the data provided. You
+    do not use outside knowledge, brand reputation, story, or
+    sentiment. You prefer companies that are cheap on earnings and
+    cash flow, growing, profitable, and not over-leveraged.
+
+  instructions: |
+    Below are 20 companies with six fundamental metrics each:
+
+    - pe_ratio:          price / earnings (lower is cheaper)
+    - revenue_growth_3y: 3-year compound annual revenue growth (higher is better)
+    - operating_margin:  operating income / revenue (higher is better)
+    - debt_to_equity:    total debt / shareholder equity (lower is better)
+    - fcf_yield:         free cash flow / market cap (higher is better)
+    - roic:              return on invested capital (higher is better)
+
+    Rank the TOP 10 most attractive companies by these fundamentals
+    alone. Use no outside information. If two companies are similar
+    overall, prefer the one with the lower P/E and higher FCF yield.
+
+  output_format: |
+    Return exactly 10 companies as a numbered list, most attractive
+    first. For each company, give one sentence of justification that
+    references specific numbers from the table.
+
+    1. <ticker> - justification
+    2. <ticker> - justification
+    ...
+
+datasets:
+  - name: fundamentals
+    path: data.csv
+    label: "Fundamentals (20 companies)"
+    entity_columns:
+      - column: ticker
+        entity_type: company
+        prefix: Company
+    shuffle: true
+    shuffle_seed: 17
+
+output:
+  dir: output
+  produce_blinded: true
+  produce_unblinded: true
+  mapping_file: mapping.json
+  table_format: markdown

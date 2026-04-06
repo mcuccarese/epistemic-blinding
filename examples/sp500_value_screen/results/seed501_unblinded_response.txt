@@ -1,0 +1,41 @@
+Here are the 20 most attractive S&P 500 companies ranked by fundamentals across valuation, growth, quality, and financial health:
+
+1. **ADBE** — Trailing PE 14.2 and forward PE 9.2 are remarkably cheap for a tech company with 39% operating margins, 89% gross margins, 59% ROE, and 19% ROA; FCF yield of 9.4% and PEG of 0.69 confirm the valuation while 12% revenue growth and 11% earnings growth show the business is still compounding.
+
+2. **ALL** — Trailing PE of 5.4 and EV/EBITDA of 4.6 make this the cheapest stock on the list by multiple measures, backed by 103% earnings growth, 29% operating margin, 40% ROE, and 16.6% FCF yield with low leverage (D/E 0.25).
+
+3. **INCY** — The lowest PEG ratio in the dataset at 0.35 combines with 28% revenue growth, 44% earnings growth, 26% operating margin, and 30% ROE; PE of 15/forward 11 is cheap for a high-growth healthcare name with 53% gross margins and 14% ROA.
+
+4. **UHS** — PE 7.7 and forward 6.9 with EV/EBITDA of 6.1 make this the cheapest healthcare company, yet it delivers 43% earnings growth, 9% revenue growth, 21% ROE, and manageable leverage (D/E 0.70).
+
+5. **CPAY** — A 57% operating margin and 80% gross margin signal exceptional business quality, while forward PE of 9.9, PEG of 0.75, and FCF yield of 9.2% say it's cheap; 21% revenue growth rounds out the profile.
+
+6. **GEN** — Forward PE of 6.6, PEG of 0.46, and FCF yield of 11.3% represent deep value in tech, supported by 26% revenue growth, 20% earnings growth, 36% operating margin, 79% gross margin, and a 2.65% dividend.
+
+7. **FSLR** — PE 13.7/forward 8.0 and PEG of 0.50 with 33% operating margin and 29% profit margin show a high-quality tech company at a bargain; 11% revenue growth, 32% earnings growth, and 17% ROE confirm the business is firing.
+
+8. **PYPL** — PE 8.4/forward 7.8, EV/EBITDA 6.6, PEG 0.72, and FCF yield 7.7% pack extreme value into a fintech with 39% earnings growth, 17% operating margin, 26% ROE, and low leverage (D/E 0.61).
+
+9. **HIG** — PE 10.2/forward 9.4, EV/EBITDA 7.3, and an outstanding 15.3% FCF yield accompany 38% earnings growth, 20% operating margin, 22% ROE, and conservatively low leverage (D/E 0.24) — well-run insurer at a discount.
+
+10. **CINF** — FCF yield of 24.9% is the highest among quality names, alongside PE 10.4, EV/EBITDA 7.5, 22% revenue growth, 67% earnings growth, and 28% operating margin; dividend of 2.24% adds income.
+
+11. **GILD** — PEG of 0.39 signals massive growth-adjusted undervaluation; 37% operating margin, 79% gross margin, 41% ROE, 13% ROA, and 23% earnings growth confirm pharma-grade quality with PE 20.6/forward 14.5 and a 2.35% dividend.
+
+12. **MKC** — Trailing PE of 8.0 is the cheapest in Consumer Defensive, with 528% earnings growth (recovery-driven), 17% revenue growth, 23% profit margin, 25% ROE, low leverage (D/E 0.65), and a 3.93% dividend yield.
+
+13. **CI** — PE 12.2/forward 8.1, PS 0.26, EV/EBITDA 7.8, PEG 0.78, and 13.5% FCF yield make this the deepest value in managed care; 10% revenue growth and sector-appropriate margins with moderate leverage.
+
+14. **BMY** — Forward PE of 9.7, EV/EBITDA 8.3, and 9.2% FCF yield at a 28% operating margin, 73% gross margin, and 40% ROE; massive earnings recovery from the prior year plus a 4.23% dividend yield.
+
+15. **CHTR** — PE 6.1/forward 4.6 and EV/EBITDA 5.9 with PEG 0.36 and FCF yield 9.8% represent deep value; 25% operating margin, 55% gross margin, and 29% ROE show quality, though revenue decline of -2.3% is a trade-off.
+
+16. **QCOM** — Forward PE 11.4, PEG 0.54, EV/EBITDA 10.1, and FCF yield 7.7% for a semiconductor company with 27% operating margin, 55% gross margin, 21% ROE, and a 2.81% dividend — cheap for the quality tier.
+
+17. **ELV** — PE 11.9/forward 10.2, EV/EBITDA 7.0, and 36% earnings growth in managed care with 10% revenue growth and a moderate balance sheet (D/E 0.74); the combination of cheapness and growth stands out among insurers.
+
+18. **ACN** — PE 16.5/forward 13.5, EV/EBITDA 9.7, and 9.8% FCF yield with 8% revenue growth, 25% ROE, 11% ROA, and the lowest leverage in the tech cohort (D/E 0.25); 3.24% dividend adds income to a rock-solid profile.
+
+19. **DELL** — Forward PE 12.0, PEG 0.72, and FCF yield 5.7% with the strongest growth profile in the top 20 at 40% revenue growth and 57% earnings growth; margins are hardware-appropriate and the valuation fully accounts for lower margin structure.
+
+20. **CTSH** — PE 13.7/forward 10.2, EV/EBITDA 7.6, PEG 1.03, and FCF yield 6.4% with 22% earnings growth, 16% operating margin, 15% ROE, 10% ROA, and a 2.11% dividend — steadily cheap IT services name with balanced fundamentals across all layers.

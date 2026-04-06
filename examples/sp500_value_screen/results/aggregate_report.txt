@@ -1,0 +1,31 @@
+
+============================================================
+AGGREGATE RESULTS (5 runs)
+============================================================
+  overlap: 13.000 +/- 1.000  (range: 12.000 - 14.000)
+  jaccard: 0.483 +/- 0.055  (range: 0.429 - 0.538)
+  mean_rank_delta_shared: 3.113 +/- 1.070  (range: 1.917 - 4.357)
+  kendall_tau: 0.524 +/- 0.165  (range: 0.275 - 0.670)
+  fame_bias_delta: +0.8 +/- 0.8  (per-run: [1, 2, 1, 0, 0])
+
+  Consistently promoted when unblinded (appeared in 2+ runs):
+    + ELV (4/5 runs)
+    + CI (4/5 runs)
+    + CRM (3/5 runs)
+    + HIG (2/5 runs)
+    + CINF (2/5 runs)
+    + PGR (2/5 runs)
+    + AMP (2/5 runs)
+    + FIS (2/5 runs)
+    + CMCSA (2/5 runs)
+
+  Consistently demoted when unblinded (appeared in 2+ runs):
+    - CTRA (4/5 runs)
+    - PRU (2/5 runs)
+    - FSLR (2/5 runs)
+    - EXE (2/5 runs)
+    - ACN (2/5 runs)
+    - CPAY (2/5 runs)
+    - TROW (2/5 runs)
+    - CF (2/5 runs)
+    - DAL (2/5 runs)

@@ -1,0 +1,88 @@
+task:
+  system_prompt: 'You are a disciplined value-oriented equity analyst. You rank
+
+    companies strictly by the fundamentals provided. You do not use
+
+    outside knowledge, brand reputation, narrative, momentum, or
+
+    sentiment. You prefer companies that are cheap relative to their
+
+    cash flows and earnings, growing, profitable, financially sound,
+
+    and not over-leveraged. You adjust valuation expectations by sector.
+
+    '
+  instructions: "Below are ~500 S&P 500 companies with fundamentals organized into\n\
+    four layers. Each layer measures a different dimension and has known\nlimitations\
+    \ — use them in combination, not in isolation.\n\n**Layer 1 — Valuation**\
+    \ (is it cheap?)\n- pe_trailing: price / trailing 12-month earnings. Lower is\
+    \ cheaper.\n  Limitation: distorted by one-time charges; undefined for negative\
+    \ earnings.\n- pe_forward: price / consensus forward earnings. Lower is cheaper.\n\
+    \  Limitation: depends on analyst estimates, which embed their own biases.\n-\
+    \ ps_ratio: price / trailing 12-month sales. Lower is cheaper.\n  Limitation:\
+    \ ignores profitability entirely.\n- pb_ratio: price / book value. Lower is cheaper.\n\
+    \  Limitation: meaningless for asset-light businesses (software, services).\n\
+    - ev_ebitda: enterprise value / EBITDA. Lower is cheaper.\n  Limitation: better\
+    \ than P/E for leveraged companies but ignores capex.\n- peg_ratio: P/E divided\
+    \ by expected growth rate. Lower is better.\n  Limitation: conflates two uncertain\
+    \ numbers.\n- fcf_yield: free cash flow / market cap. Higher is better.\n  Limitation:\
+    \ purest valuation metric but FCF is lumpy quarter-to-quarter.\n\n**Layer 2 —\
+    \ Growth** (is the business growing?)\n- revenue_growth: year-over-year revenue\
+    \ growth (trailing). Higher is better.\n  Limitation: past growth does not guarantee\
+    \ future growth; distorted by acquisitions.\n- earnings_growth: year-over-year\
+    \ earnings growth (trailing). Higher is better.\n  Limitation: more volatile than\
+    \ revenue; heavily accounting-dependent.\n\n**Layer 3 — Quality & Financial\
+    \ Health** (is it a good business?)\n- operating_margin: operating income / revenue.\
+    \ Higher is better.\n  Limitation: sector-dependent norms (software ~30%, retail\
+    \ ~5%).\n- profit_margin: net income / revenue. Higher is better.\n  Limitation:\
+    \ after-tax; affected by jurisdiction and one-time items.\n- gross_margin: gross\
+    \ profit / revenue. Higher is better.\n  Limitation: measures pricing power and\
+    \ cost structure.\n- roe: return on equity. Higher is better.\n  Limitation: inflated\
+    \ by leverage; meaningless if equity is negative.\n- roa: return on assets. Higher\
+    \ is better.\n  Limitation: better than ROE for comparing across capital structures.\n\
+    - debt_to_equity: total debt / shareholder equity. Lower is better.\n  Limitation:\
+    \ sector norms vary wildly (banks vs. tech).\n- current_ratio: current assets\
+    \ / current liabilities. Higher is better.\n  Limitation: less relevant for companies\
+    \ with revolving credit lines.\n\n**Layer 4 — Shareholder Returns** (what do\
+    \ you get paid to hold it?)\n- dividend_yield: annual dividend / price. Higher\
+    \ is better for income.\n  Limitation: does not capture buybacks; unusually high\
+    \ yield can signal distress.\n\n**Missing values** (NaN) mean the metric is unavailable\
+    \ for that company.\nDo not penalize a company for missing data — simply weight\
+    \ the metrics\nthat are available.\n\nTASK: Identify the 20 most attractive companies\
+    \ by fundamentals alone.\nSynthesize across all four layers — no single metric\
+    \ should dominate.\nConsider sector context when interpreting ratios (e.g., a\
+    \ 15x P/E is\nexpensive for a utility but cheap for a growth company).\n\nUse\
+    \ ONLY the data provided. Do not use any knowledge about these\ncompanies beyond\
+    \ what appears in the table.\n"
+  output_format: 'Return exactly 20 companies as a numbered list, most attractive
+    first.
+
+    For each, give a 1-2 sentence justification referencing specific
+
+    numbers from the data.
+
+
+    1. <identifier> — justification
+
+    2. <identifier> — justification
+
+    ...
+
+    '
+datasets:
+- name: fundamentals
+  path: sp500_fundamentals.csv
+  label: S&P 500 Fundamentals
+  entity_columns:
+  - column: ticker
+    entity_type: company
+    prefix: Company
+    blind: true
+  shuffle: true
+  shuffle_seed: 501
+output:
+  dir: output
+  produce_blinded: true
+  produce_unblinded: true
+  mapping_file: mapping.json
+  table_format: markdown
