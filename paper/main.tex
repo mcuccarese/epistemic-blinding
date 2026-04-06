@@ -10,6 +10,8 @@
 \usepackage{xcolor}
 \usepackage{colortbl}
 \usepackage{makecell}
+\usepackage{placeins}  % for \FloatBarrier
+\usepackage{balance}   % for balanced last page columns
 
 %% Colors matching whitepaper
 \definecolor{ebblue}{HTML}{2171B5}
@@ -180,34 +182,35 @@ GBM & 75\% & 5 & 5 & 3/3 \\
 
 \subsection{The Smoking Gun}
 
-The most direct evidence of contamination comes from the model's own justifications (Table~\ref{tab:smokinggun}).
+The most direct evidence of contamination comes from the model's own justifications (Table~\ref{tab:smokinggun}). When blinded, the model justified Gene\_088's ranking by citing ``very high mutation frequency (42.1\%) with full constraint and strong structural enrichment''---all features present in the data. When unblinded, the model cited ``proven therapeutic tractability via covalent RAS inhibitors (sotorasib, adagrasib)'' and ``central node in RAS/MAPK pathway with extensive clinical validation''---facts not derivable from any provided feature.
 
-\begin{table*}[t]
+\begin{table}[h]
 \centering
-\small
-\begin{tabular}{@{}p{1.8cm}p{6.8cm}p{6.8cm}@{}}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{1.2cm}p{3cm}p{3cm}@{}}
 \toprule
-& \cellcolor{ebbluepale}\textcolor{ebblue}{\textbf{Blinded (Gene\_088, ranked \#5)}} & \cellcolor{eborangepale}\textcolor{eborange}{\textbf{Unblinded (KRAS, ranked \#1)}} \\
+& \cellcolor{ebbluepale}\textcolor{ebblue}{\textbf{Blinded (\#5)}} & \cellcolor{eborangepale}\textcolor{eborange}{\textbf{Unblinded (\#1)}} \\
 \midrule
-\textbf{Opening} & ``Gene\_088 ranks \#5 based on quantitative mutation features'' & ``KRAS ranks \#1 as the most actionable target'' \\
+\textbf{Shared} & \multicolumn{2}{c}{\textit{Both: 38\% mut.\ freq., codon-12 hotspot, strong enrichment}} \\
 \addlinespace
-\textbf{Shared reasoning} & \multicolumn{2}{c}{\textit{Both cite: high mutation frequency (38\%), recurrent codon-12 hotspot, strong statistical enrichment, exclusively missense mutations}} \\
+\textbf{Extra} & ``GTPase domain mutations suggest gain-of-function'' & \cellcolor{ebcontamination}\textcolor{ebcoral}{\textbf{``Proven tractability via covalent RAS inhibitors (sotorasib, adagrasib)''}} \\
 \addlinespace
-\textbf{Additional reasoning} & ``GTPase domain concentrated mutations suggest gain-of-function mechanism'' & \cellcolor{ebcontamination}\textcolor{ebcoral}{\textbf{``Proven therapeutic tractability via covalent RAS inhibitors (sotorasib, adagrasib)''}} \newline \cellcolor{ebcontamination}\textcolor{ebcoral}{\textbf{``Central node in RAS/MAPK pathway with extensive clinical validation''}} \\
-\addlinespace
-\textbf{Conclusion} & ``Exceptionally high recurrence at a single hotspot with strong functional convergence'' & ``KRAS is the defining oncogenic driver in CRC with validated druggability and multiple approved therapies'' \\
+\textbf{Verdict} & ``Recurrent hotspot with functional convergence'' & ``Defining driver with validated druggability'' \\
 \bottomrule
 \end{tabular}
-\caption{Side-by-side LLM justifications for the same gene (KRAS / Gene\_088) in colorectal cancer. The highlighted phrases in the unblinded column are not derivable from any provided feature---they come from the model's parametric knowledge. Same gene, same features, different rank (\#5 vs.\ \#1), different reasoning.}
+\caption{LLM justifications for KRAS / Gene\_088 in CRC. Highlighted text is parametric knowledge not present in any supplied feature.}
 \label{tab:smokinggun}
-\end{table*}
+\end{table}
 
-\begin{figure*}[t]
+\FloatBarrier
+
+\begin{figure}[h]
 \centering
-\includegraphics[width=0.6\textwidth]{figures/fig3_slope_chart.png}
-\caption{Rank-shift slope chart for IDH-wildtype glioblastoma. Lines connect the same gene's rank in the blinded (left) and unblinded (right) conditions. Orange: famous genes promoted when named. Blue: obscure genes with strong features demoted when named.}
+\includegraphics[width=\columnwidth]{figures/fig3_slope_chart.png}
+\caption{Rank-shift slope chart for IDH-wildtype glioblastoma. Lines connect the same gene's rank in the blinded (left) and unblinded (right) conditions. Orange: famous genes promoted when named. Blue: obscure genes demoted when named.}
 \label{fig:slope}
-\end{figure*}
+\end{figure}
 
 %% ====================================================================
 %% 5. S&P 500 CASE STUDY
@@ -216,8 +219,9 @@ The most direct evidence of contamination comes from the model's own justificati
 
 To test generalizability, we applied the protocol to equity analysis. An LLM was asked to rank the 20 most attractive value investments from $\sim$500 S\&P~500 companies, given four layers of fundamentals: valuation (P/E, P/S, P/B, EV/EBITDA, PEG, FCF yield), growth (revenue, earnings), quality (margins, ROE, ROA, leverage), and shareholder returns (dividend yield). Because market capitalization and sector together can identify most mega-cap stocks, all features were normalized. Ticker symbols were the only entity column blinded.
 
-We ran five independent seeds (42, 137, 256, 389, 501). Results:
+We ran five independent seeds (42, 137, 256, 389, 501):
 
+\vspace{-0.5em}
 \begin{table}[h]
 \centering
 \small
@@ -234,8 +238,11 @@ Kendall $\tau$ & 0.52 $\pm$ 0.17 & 0.28--0.67 \\
 \caption{S\&P~500 blinded vs.\ unblinded comparison across five seeds.}
 \label{tab:sp500}
 \end{table}
+\vspace{-0.5em}
 
 On average, 7 of the top~20 change when tickers are revealed---a 35\% reshaping of the recommendation. The effect is systematic (Figure~\ref{fig:sp500}): tickers like ELV and CI were promoted in 4 of 5 runs; CTRA was demoted in 3 of 5 runs. The model is not randomly noisy---it is consistently biased by brand recognition.
+
+\FloatBarrier
 
 \begin{figure}[h]
 \centering
@@ -243,6 +250,8 @@ On average, 7 of the top~20 change when tickers are revealed---a 35\% reshaping 
 \caption{S\&P~500 consistency across five random seeds. Each seed shuffles entity codes differently. Consistent arrows indicate systematic bias, not stochastic noise.}
 \label{fig:sp500}
 \end{figure}
+
+\FloatBarrier
 
 %% ====================================================================
 %% 6. DISCUSSION
