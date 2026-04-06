@@ -1,0 +1,80 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Why this matters beyond accuracy.}{1}{section*.2}\protected@file@percent }
+\citation{oren2024,golchin2024,sainz2023}
+\citation{wang2023}
+\citation{choi2025}
+\citation{hermann2024}
+\citation{hu2025}
+\@writefile{toc}{\contentsline {paragraph}{Contributions.}{2}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Data contamination in LLM evaluation.}{2}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Entity bias in language models.}{2}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Anonymization in multi-agent reasoning.}{2}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Pretraining leakage in protein language models.}{2}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{LLMs for biological analysis.}{2}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{2}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Protocol}{2}{subsection.3.1}\protected@file@percent }
+\citation{lin2023}
+\citation{theodoris2023}
+\citation{elnaggar2022}
+\citation{hoadley2018}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}What Gets Blinded and What Doesn't}{3}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Implementation}{3}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Case Study: Oncology Drug Target Prioritization}{3}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Task and Data}{3}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{The convergence hypothesis.}{3}{section*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Data sources.}{3}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Feature set.}{3}{section*.12}\protected@file@percent }
+\citation{gebru2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Traditional vs.\ epistemic blinding workflow. Both approaches receive identical quantitative features and recover identical numbers of validated drug targets. The critical difference is in which novel candidates are surfaced: the unblinded workflow promotes literature-familiar genes while the blinded workflow ranks purely on feature strength.}}{4}{figure.caption.9}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:method}{{1}{4}{Traditional vs.\ epistemic blinding workflow. Both approaches receive identical quantitative features and recover identical numbers of validated drug targets. The critical difference is in which novel candidates are surfaced: the unblinded workflow promotes literature-familiar genes while the blinded workflow ranks purely on feature strength}{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{Unbiased data assembly.}{4}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Experimental Design}{4}{subsection.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Indications tested, spanning a range of feature signal strength.}}{4}{table.caption.14}\protected@file@percent }
+\newlabel{tab:indications}{{1}{4}{Indications tested, spanning a range of feature signal strength}{table.caption.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Results}{4}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Aggregate.}{4}{section*.15}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Set overlap between blinded and unblinded top-20 lists. Target recovery (rightmost column) is identical in both conditions.}}{5}{table.caption.16}\protected@file@percent }
+\newlabel{tab:overlap}{{2}{5}{Set overlap between blinded and unblinded top-20 lists. Target recovery (rightmost column) is identical in both conditions}{table.caption.16}{}}
+\@writefile{toc}{\contentsline {paragraph}{Fame bias.}{5}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Contamination scales with feature ambiguity.}{5}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}The Smoking Gun}{5}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Case Study: S\&P 500 Value Screening}{5}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{5}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Auditability, Not Accuracy}{5}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}When to Blind}{5}{subsection.6.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Side-by-side LLM justifications for the same gene (KRAS / Gene\_088) in colorectal cancer. The highlighted phrases in the unblinded column are not derivable from any provided feature---they come from the model's parametric knowledge. Same gene, same features, different rank (\#5 vs.\ \#1), different reasoning.}}{6}{table.caption.19}\protected@file@percent }
+\newlabel{tab:smokinggun}{{3}{6}{Side-by-side LLM justifications for the same gene (KRAS / Gene\_088) in colorectal cancer. The highlighted phrases in the unblinded column are not derivable from any provided feature---they come from the model's parametric knowledge. Same gene, same features, different rank (\#5 vs.\ \#1), different reasoning}{table.caption.19}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces S\&P~500 blinded vs.\ unblinded comparison across five seeds.}}{6}{table.caption.21}\protected@file@percent }
+\newlabel{tab:sp500}{{4}{6}{S\&P~500 blinded vs.\ unblinded comparison across five seeds}{table.caption.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}What This Does Not Fix}{6}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Sampling bias.}{6}{section*.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Structural leakage.}{6}{section*.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Semantically meaningful names.}{6}{section*.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Limitations}{6}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{6}{section.8}\protected@file@percent }
+\bibstyle{plain}
+\bibcite{oren2024}{{1}{}{{}}{{}}}
+\bibcite{golchin2024}{{2}{}{{}}{{}}}
+\bibcite{sainz2023}{{3}{}{{}}{{}}}
+\bibcite{wang2023}{{4}{}{{}}{{}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Rank-shift slope chart for IDH-wildtype glioblastoma. Lines connect the same gene's rank in the blinded (left) and unblinded (right) conditions. Orange: famous genes promoted when named. Blue: obscure genes with strong features demoted when named.}}{7}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:slope}{{2}{7}{Rank-shift slope chart for IDH-wildtype glioblastoma. Lines connect the same gene's rank in the blinded (left) and unblinded (right) conditions. Orange: famous genes promoted when named. Blue: obscure genes with strong features demoted when named}{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {paragraph}{Code availability.}{7}{section*.26}\protected@file@percent }
+\bibcite{choi2025}{{5}{}{{}}{{}}}
+\bibcite{hermann2024}{{6}{}{{}}{{}}}
+\bibcite{hu2025}{{7}{}{{}}{{}}}
+\bibcite{lin2023}{{8}{}{{}}{{}}}
+\bibcite{theodoris2023}{{9}{}{{}}{{}}}
+\bibcite{elnaggar2022}{{10}{}{{}}{{}}}
+\bibcite{gebru2021}{{11}{}{{}}{{}}}
+\bibcite{hoadley2018}{{12}{}{{}}{{}}}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces S\&P~500 consistency across five random seeds. Each seed shuffles entity codes differently. Consistent arrows indicate systematic bias, not stochastic noise.}}{8}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:sp500}{{3}{8}{S\&P~500 consistency across five random seeds. Each seed shuffles entity codes differently. Consistent arrows indicate systematic bias, not stochastic noise}{figure.caption.22}{}}
+\gdef \@abspage@last{8}
