@@ -1,0 +1,2 @@
+pull_timestamp: 2026-04-06T06:20:14Z
+ticker_count: 502

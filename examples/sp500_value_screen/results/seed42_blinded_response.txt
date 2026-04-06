@@ -1,0 +1,39 @@
+1. **Company_121** â€” Financial Services: Trailing PE 5.4, forward PE 8.2, EV/EBITDA 4.6, PEG 0.45, FCF yield 16.6%; earnings growth 103%, operating margin 29%, ROE 39.5%, debt-to-equity 0.25, dividend yield 2.1%. Cheapest name on nearly every valuation metric while delivering strong profitability, explosive earnings growth, and a conservative balance sheet.
+
+2. **Company_012** â€” Technology: PE 14.2/9.2 forward, PEG 0.69, FCF yield 9.4%; 89.4% gross margin, 38.8% operating margin, ROE 58.8%, ROA 18.9%, debt-to-equity 0.58. A high-quality compounder with best-in-class capital efficiency trading at a modest multiple with 12% revenue growth.
+
+3. **Company_371** â€” Healthcare: PE 7.7/6.9, EV/EBITDA 6.1, P/S 0.62, FCF yield 5.2%; earnings growth 42.7%, revenue growth 9.1%, ROE 21.3%, debt-to-equity 0.70. The cheapest healthcare name with a genuine earnings inflection and reasonable quality metrics across the board.
+
+4. **Company_011** â€” Healthcare: PE 15.0/11.1, PEG 0.35, FCF yield 3.2%; 27.8% revenue growth, 43.6% earnings growth, 25.6% operating margin, 25% profit margin, ROE 29.9%, ROA 13.6%. Best growth-at-a-reasonable-price profile in healthcareâ€”fast growth with high margins and strong returns on capital.
+
+5. **Company_374** â€” Technology: Forward PE 9.9, PEG 0.75, FCF yield 9.2%; 57.1% operating margin, 20.7% revenue growth, 79.7% gross margin, ROE 29.1%. Exceptional operating leverage and pricing power at a single-digit forward earnings multiple with robust top-line growth.
+
+6. **Company_396** â€” Technology: Forward PE 3.7, PEG 0.21; 196% revenue growth, 756% earnings growth, 67.6% operating margin, ROA 20.1%, debt-to-equity 0.15. Extraordinary growth and profitability at minimal leverageâ€”the forward multiple implies massive earnings scaling that the margins and growth trajectory support.
+
+7. **Company_330** â€” Technology: Forward PE 6.6, PEG 0.46, FCF yield 11.3%; 25.8% revenue growth, 20.1% earnings growth, 35.8% operating margin, dividend yield 2.65%. Combines a deeply discounted forward multiple with double-digit growth, high margins, and an uncommon tech dividendâ€”offset partially by debt-to-equity of 3.6.
+
+8. **Company_156** â€” Financial Services: PE 8.4/7.8, EV/EBITDA 6.6, PEG 0.72, FCF yield 7.7%; 39.4% earnings growth, ROE 25.7%, debt-to-equity 0.61, dividend yield 1.24%. Cheap on every valuation metric with strong earnings momentum, solid profitability, and prudent leverage for a financial.
+
+9. **Company_006** â€” Healthcare: PEG 0.39, PE 20.6/14.5; 37.4% operating margin, 28.9% profit margin, ROE 40.7%, ROA 12.5%, 23.4% earnings growth, dividend yield 2.35%. Premium quality at a reasonable absolute multipleâ€”PEG under 0.4 signals the market is significantly underpricing this level of profitability and growth.
+
+10. **Company_485** â€” Financial Services: PE 10.4, FCF yield 24.9%, EV/EBITDA 7.5; 21.8% revenue growth, 67.3% earnings growth, 27.6% operating margin, dividend yield 2.24%. Outstanding free cash generation paired with strong top- and bottom-line growth; debt-to-equity of 5.6 is elevated but within financial-sector norms.
+
+11. **Company_446** â€” Financial Services: PE 10.7/10.4, FCF yield 18.5%, EV/EBITDA 7.5; 23.4% earnings growth, 25.9% operating margin, ROE 20.7%, debt-to-equity 0.29. Stands out among financials for its combination of a cheap multiple, exceptional free cash flow, and a very conservative balance sheet.
+
+12. **Company_372** â€” Financial Services: Forward PE 6.4, P/S 0.55, P/B 1.05, FCF yield 37.2%; 31.2% revenue growth, dividend yield 5.6%. The highest FCF yield in the dataset with strong revenue momentum and a near-book valuationâ€”a classic deep-value financial with a high income component.
+
+13. **Company_116** â€” Technology: Forward PE 8.0, PEG 0.50, EV/EBITDA 8.8; 32.3% earnings growth, 32.6% operating margin, 29.3% profit margin. Strong earnings acceleration and wide margins at a forward single-digit multiple, though debt-to-equity of 6.9 warrants monitoring.
+
+14. **Company_318** â€” Industrials: PE 8.7/8.1, P/S 0.69, EV/EBITDA 7.8, FCF yield 6.8%; 44.6% earnings growth, ROE 27.7%, debt-to-equity 1.03. The cheapest industrial in the dataset with a meaningful earnings rebound and respectable capital returns at moderate leverage.
+
+15. **Company_437** â€” Communication Services: PE 6.1/4.6, PEG 0.36, FCF yield 9.8%; 24.7% operating margin, ROE 28.7%, 55.3% gross margin. Among the cheapest absolute P/E ratios in the entire universe with solid profitabilityâ€”revenue decline of 2.3% is the main headwind but the valuation provides a wide margin of safety.
+
+16. **Company_473** â€” Consumer Cyclical: PE 12.8/9.1, EV/EBITDA 6.0, FCF yield 6.2%; 373% earnings growth, ROE 37%, dividend yield 5.95%. A dramatic earnings recovery combined with a cheap price and a high yieldâ€”5% operating margin is in line with sector norms for cyclical retailers.
+
+17. **Company_153** â€” Energy: PE 15.4/12.0, EV/EBITDA 6.2, FCF yield 4.6%; 23.4% revenue growth, 20.6% earnings growth, 33.3% operating margin, 74.1% gross margin, debt-to-equity 0.27, dividend yield 2.55%. The best risk-adjusted energy nameâ€”strong and balanced growth, high margins, minimal leverage, and a reasonable income stream.
+
+18. **Company_388** â€” Consumer Cyclical: PE 11.7, EV/EBITDA 6.6, PEG 0.74; 22.3% operating margin, 34% ROE, 17.2% ROA, 56.6% gross margin, debt-to-equity 0.36. An exceptionally high-quality consumer business at a discount multiple with best-in-class returns on assets and a conservative balance sheet.
+
+19. **Company_117** â€” Financial Services: PE 12.9/9.8, EV/EBITDA 7.4, FCF yield 20%; 15.1% earnings growth, 7.9% revenue growth, debt-to-equity 0.39, dividend yield 1.54%. A conservatively run financial with one of the highest FCF yields in the set, steady growth, and minimal leverage.
+
+20. **Company_047** â€” Energy: PE 13.7/11.1, EV/EBITDA 5.2, FCF yield 4.7%; 38.3% revenue growth, 27.5% operating margin, 45.3% gross margin, debt-to-equity 0.28, dividend yield 3.07%. Cheap on enterprise value with strong top-line momentum, solid margins, and one of the lowest leverage ratios among energy names.

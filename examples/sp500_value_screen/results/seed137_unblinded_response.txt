@@ -1,0 +1,39 @@
+1. **ADBE** â€” Forward PE 9.2 with PEG 0.69 and 9.4% FCF yield make this the cheapest high-quality tech name; 38.8% operating margin, 89.4% gross margin, 58.8% ROE, and 18.9% ROA with modest leverage (0.58 D/E).
+
+2. **ALL** â€” Trailing PE 5.4, forward PE 8.2, PEG 0.45, and 16.6% FCF yield; 103% earnings growth, 29% operating margin, 39.5% ROE, and very low D/E of 0.25 make this the standout insurer.
+
+3. **UHS** â€” PE 7.7/6.9 is the cheapest healthcare name; 42.7% earnings growth, 9.1% revenue growth, 5.2% FCF yield, 21.3% ROE, and manageable 0.70 D/E for a hospital operator.
+
+4. **GILD** â€” PEG of 0.39 is among the lowest in the dataset; 37.4% operating margin, 78.8% gross margin, 40.7% ROE, 12.5% ROA, and 2.35% dividend yield deliver quality and income at forward PE 14.5.
+
+5. **PYPL** â€” PE 8.4/7.8 with PEG 0.72 and 7.7% FCF yield; 39.4% earnings growth, 25.7% ROE, and low 0.61 D/E â€” very cheap fintech with re-accelerating earnings.
+
+6. **INCY** â€” PEG 0.35 (lowest among top candidates), 27.8% revenue growth and 43.6% earnings growth, 25.6% operating margin, 29.9% ROE, 13.6% ROA â€” strong double-digit growth with solid pharma margins.
+
+7. **HIG** â€” PE 10.2/9.4, 15.3% FCF yield, 38.2% earnings growth, 21.7% ROE, and just 0.24 D/E â€” one of the cheapest, best-capitalized financials with strong shareholder returns (1.76% dividend).
+
+8. **TRV** â€” PE 10.7/10.4 with an 18.5% FCF yield (highest among quality names); 23.4% earnings growth, 25.9% operating margin, 20.7% ROE, 0.29 D/E â€” cheap, profitable, low-leverage insurer.
+
+9. **MU** â€” Forward PE 3.7 with PEG 0.21; 196% revenue growth, 67.6% operating margin, 41.5% profit margin, 39.8% ROE, 20.1% ROA, and D/E of just 0.15 â€” extraordinary current fundamentals with a fortress balance sheet, though cyclicality is inherent to the sector.
+
+10. **DECK** â€” PE 14.0/13.4, 31.4% operating margin, 39.7% ROE, 19.9% ROA, and 0.13 D/E (near-zero leverage); 5.3% FCF yield and 11% earnings growth make this one of the highest-quality balance sheets at a consumer cyclical valuation.
+
+11. **CINF** â€” PE 10.4, 24.9% FCF yield, 21.8% revenue growth, 67.3% earnings growth, 27.6% operating margin, and 2.24% dividend â€” outstanding cash generation and growth for a financial services company.
+
+12. **GEN** â€” Forward PE 6.6, PEG 0.46, 11.3% FCF yield; 25.8% revenue growth, 35.8% operating margin, 78.8% gross margin, and 2.65% dividend yield â€” very cheap with high margins, though elevated D/E of 3.63 tempers the case.
+
+13. **QCOM** â€” Forward PE 11.4, PEG 0.54, 7.7% FCF yield; 27.5% operating margin, 55.1% gross margin, 14.1% ROA, 0.64 D/E, and 2.81% dividend â€” cheap semiconductor with a solid balance sheet and income.
+
+14. **FSLR** â€” PE 13.7/8.0 with PEG 0.50; 32.6% operating margin, 29.3% profit margin, 32.3% earnings growth, and 11.1% revenue growth â€” an attractively valued growth name in tech, though D/E of 6.87 warrants caution.
+
+15. **ELV** â€” PE 11.9/10.2, PEG 1.15, 5.1% FCF yield; 9.5% revenue growth, 36.3% earnings growth, 0.74 D/E, and 2.29% dividend â€” very cheap health insurer with strong growth and low leverage for its sector.
+
+16. **CPAY** â€” Forward PE 9.9, PEG 0.75, 9.2% FCF yield; 57.1% operating margin and 79.7% gross margin are among the highest in the dataset, paired with 20.7% revenue growth and 29.1% ROE.
+
+17. **NVDA** â€” Forward PE 16.0 and PEG 0.72 are reasonable for 73.2% revenue growth and 95.6% earnings growth; 65% operating margin, 55.6% profit margin, and 51.2% ROA are elite, though D/E of 7.26 is elevated.
+
+18. **HCA** â€” PE 16.7/14.2, 5.5% FCF yield, 44.5% earnings growth, 6.7% revenue growth, and 12.4% ROA â€” strong earnings momentum for a healthcare provider at a moderate valuation.
+
+19. **CRM** â€” Forward PE 12.6, PEG 1.02, 9.3% FCF yield; 12.1% revenue growth, 17.9% earnings growth, 77.7% gross margin, and just 0.30 D/E â€” high cash generation and low leverage for tech.
+
+20. **INTU** â€” Forward PE 16.0, PEG 1.09; 17.4% revenue growth, 48.5% earnings growth, 80.9% gross margin, 23.5% ROE, 10.3% ROA, and 0.36 D/E â€” strong growth compounding at a quality premium that the margins justify.

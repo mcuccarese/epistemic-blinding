@@ -1,0 +1,30 @@
+{
+  "top_k": 20,
+  "blinded_count": 20,
+  "unblinded_count": 20,
+  "overlap": 13,
+  "jaccard": 0.48148148148148145,
+  "mean_rank_delta_shared": 2.3076923076923075,
+  "kendall_tau": 0.7692307692307693,
+  "promoted_in_unblinded": [
+    "FSLR",
+    "CINF",
+    "CI",
+    "BMY",
+    "ELV",
+    "DELL",
+    "CTSH"
+  ],
+  "demoted_in_unblinded": [
+    "MU",
+    "SYF",
+    "TRV",
+    "GPN",
+    "DECK",
+    "DAL",
+    "BBY"
+  ],
+  "famous_in_blinded": [],
+  "famous_in_unblinded": [],
+  "fame_bias_delta": 0
+}

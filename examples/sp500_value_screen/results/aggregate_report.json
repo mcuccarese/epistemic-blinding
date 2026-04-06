@@ -1,0 +1,48 @@
+{
+  "n_runs": 5,
+  "overlap": {
+    "mean": 13.8,
+    "std": 1.3038404810405297
+  },
+  "jaccard": {
+    "mean": 0.5347028897028897,
+    "std": 0.08143680604711394
+  },
+  "mean_rank_delta": {
+    "mean": 2.7913919413919412,
+    "std": 0.8194807865613842
+  },
+  "kendall_tau": {
+    "mean": 0.533040293040293,
+    "std": 0.12641407220261244
+  },
+  "fame_bias_delta": {
+    "mean": 0.6,
+    "values": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ]
+  },
+  "consistently_promoted": {
+    "CI": 4,
+    "ELV": 3,
+    "CINF": 3,
+    "HIG": 2,
+    "CRM": 2,
+    "BMY": 2,
+    "FIS": 2
+  },
+  "consistently_demoted": {
+    "CTRA": 4,
+    "PRU": 2,
+    "NTAP": 2,
+    "ACN": 2,
+    "TROW": 2,
+    "NEM": 2,
+    "DAL": 2,
+    "TRV": 2
+  }
+}

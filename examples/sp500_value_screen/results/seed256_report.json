@@ -1,0 +1,25 @@
+{
+  "top_k": 20,
+  "blinded_count": 20,
+  "unblinded_count": 20,
+  "overlap": 15,
+  "jaccard": 0.625,
+  "mean_rank_delta_shared": 3.933333333333333,
+  "kendall_tau": 0.4,
+  "promoted_in_unblinded": [
+    "BMY",
+    "FIS",
+    "AMP",
+    "CPAY",
+    "CI"
+  ],
+  "demoted_in_unblinded": [
+    "SYF",
+    "TROW",
+    "NEM",
+    "CTRA"
+  ],
+  "famous_in_blinded": [],
+  "famous_in_unblinded": [],
+  "fame_bias_delta": 0
+}
