@@ -1,57 +1,49 @@
-\documentclass[11pt,twocolumn]{article}
+\documentclass[sigconf, nonacm]{acmart}
 
-% --- Packages ---
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[expansion=false]{microtype}
-\usepackage{graphicx}
+%% Suppress ACM-specific metadata for arXiv preprint
+\settopmatter{printacmref=false, printfolios=true}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\pagestyle{plain}
+
+%% Additional packages
 \usepackage{booktabs}
-\usepackage{amsmath}
-\usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{colortbl}
-\usepackage{enumitem}
-\usepackage[margin=0.85in]{geometry}
-\usepackage{caption}
-\usepackage{natbib}
-\usepackage{tabularx}
-\usepackage{multirow}
+\usepackage{makecell}
 
-% --- Colors (matching whitepaper) ---
-\definecolor{blue}{HTML}{2171B5}
-\definecolor{bluepale}{HTML}{C6DBEF}
-\definecolor{orange}{HTML}{E6550D}
-\definecolor{orangepale}{HTML}{FDBE85}
-\definecolor{coral}{HTML}{E34A33}
-\definecolor{contamination}{HTML}{FFF3CD}
-\definecolor{gray}{HTML}{999999}
+%% Colors matching whitepaper
+\definecolor{ebblue}{HTML}{2171B5}
+\definecolor{ebbluepale}{HTML}{C6DBEF}
+\definecolor{eborange}{HTML}{E6550D}
+\definecolor{eborangepale}{HTML}{FDBE85}
+\definecolor{ebcoral}{HTML}{E34A33}
+\definecolor{ebcontamination}{HTML}{FFF3CD}
 
 \hypersetup{
   colorlinks=true,
-  linkcolor=blue,
-  citecolor=blue,
-  urlcolor=blue,
+  linkcolor=ebblue,
+  citecolor=ebblue,
+  urlcolor=ebblue,
 }
 
-% --- Title ---
-\title{\textbf{Epistemic Blinding: An Inference-Time Protocol for Auditing Prior Contamination in LLM-Assisted Analysis}}
+%% ====================================================================
+\begin{document}
+
+\title{Epistemic Blinding: An Inference-Time Protocol for Auditing Prior Contamination in LLM-Assisted Analysis}
 
 \author{Michael F. Cuccarese, PhD}
-\date{April 2026}
+\affiliation{}
+\email{}
 
-\begin{document}
-\maketitle
-
-% ====================================================================
-% ABSTRACT
-% ====================================================================
 \begin{abstract}
 We built an agentic system that uses large language models to reason across multiple biological datasets for drug target prioritization. During development, we discovered that the LLM's outputs silently blend data-driven inference with memorized priors about named entities---and the blend is invisible: there is no way to determine, from a single output, how much came from the data on the page and how much came from the model's training memory. To address this, we introduce \textit{epistemic blinding}, a simple inference-time protocol that replaces entity identifiers with anonymous codes before prompting, then compares outputs against an unblinded control. The protocol does not make LLM reasoning deterministic, but it restores one critical axis of auditability: measuring how much of an output came from the supplied data versus the model's parametric knowledge. In our original domain---oncology drug target prioritization across four cancer types---blinding changes 16\% of top-20 predictions while preserving identical recovery of validated targets. The known biology is the same, but the discovery frontier shifts from literature-derived to data-driven nominations. Recognizing that this problem is not specific to biology, we generalized the protocol into an open-source, model-agnostic tool and tested it on S\&P~500 equity screening, where brand-recognition bias reshapes 30--40\% of top-20 rankings across five random seeds. We do not claim that blinded analysis produces better results. We claim that without blinding, there is no way to know to what degree the agent is adhering to the analytical process you designed.
 \end{abstract}
 
-% ====================================================================
-% 1. INTRODUCTION
-% ====================================================================
+\maketitle
+
+%% ====================================================================
+%% 1. INTRODUCTION
+%% ====================================================================
 \section{Introduction}
 
 Consider a concrete example. An LLM is given a table of 100 genes with quantitative features for colorectal cancer and asked to rank the top~20 drug targets. When the gene names are visible, the model ranks KRAS at position~\#1 and justifies the choice by citing ``proven therapeutic tractability via covalent RAS inhibitors.'' When the identical features are presented with anonymous labels, the gene corresponding to KRAS---now labeled Gene\_088---is ranked~\#5, below genes with higher mutation frequencies and stronger convergence signals. The phrase ``proven therapeutic tractability via covalent RAS inhibitors'' does not appear anywhere in the provided data. It comes from the model's training corpus.
@@ -66,31 +58,31 @@ When we write traditional software, every step is traceable. We can follow a dat
 
 \paragraph{Contributions.} This work originated in a specific need---building an agentic system for multi-dataset biological reasoning without prior contamination---and generalized into a domain-agnostic protocol. We present (1)~a formal description of epistemic blinding, including treatment of cross-dataset consistency and subtle leak sources; (2)~an open-source, config-driven implementation that works with any LLM; (3)~a controlled experiment in oncology drug target prioritization, the domain that motivated the work, showing systematic fame bias across four cancer types; and (4)~a replication in S\&P~500 equity screening demonstrating that the same phenomenon---and the same fix---transfers across domains.
 
-% ====================================================================
-% 2. RELATED WORK
-% ====================================================================
+%% ====================================================================
+%% 2. RELATED WORK
+%% ====================================================================
 \section{Related Work}
 
-\paragraph{Data contamination in LLM evaluation.} The problem of training data leaking into benchmark evaluations is well-studied \cite{oren2024,golchin2024,sainz2023}. Our work addresses a related but distinct problem: the model's \textit{general knowledge} contaminating \textit{domain-specific reasoning}, not memorized test sets inflating metrics.
+\paragraph{Data contamination in LLM evaluation.} The problem of training data leaking into benchmark evaluations is well-studied~\cite{oren2024,golchin2024,sainz2023}. Our work addresses a related but distinct problem: the model's \textit{general knowledge} contaminating \textit{domain-specific reasoning}, not memorized test sets inflating metrics.
 
-\paragraph{Entity bias in language models.} Wang et al.\ \cite{wang2023} demonstrated entity-specific biases in factual question answering and proposed causal interventions that perturb entity names. We extend this from factual QA to scientific and financial analysis, where the consequences extend beyond accuracy to resource allocation and discovery.
+\paragraph{Entity bias in language models.} Wang et al.~\cite{wang2023} demonstrated entity-specific biases in factual question answering and proposed causal interventions that perturb entity names. We extend this from factual QA to scientific and financial analysis, where the consequences extend beyond accuracy to resource allocation and discovery.
 
-\paragraph{Anonymization in multi-agent reasoning.} Choi et al.\ \cite{choi2025} showed that anonymizing agent identities in multi-LLM debate reduces conformity bias. We extend this principle from social identity to epistemic identity---anonymizing the \textit{objects of reasoning} rather than the \textit{reasoning agents}.
+\paragraph{Anonymization in multi-agent reasoning.} Choi et al.~\cite{choi2025} showed that anonymizing agent identities in multi-LLM debate reduces conformity bias. We extend this principle from social identity to epistemic identity---anonymizing the \textit{objects of reasoning} rather than the \textit{reasoning agents}.
 
-\paragraph{Pretraining leakage in protein language models.} Hermann et al.\ \cite{hermann2024} demonstrated that protein language model pretraining creates data leakage that distorts downstream task performance by 11.1\%. Their solution---pretraining-aware data splits---addresses the problem at the data level. Ours addresses it at inference time, requiring no retraining.
+\paragraph{Pretraining leakage in protein language models.} Hermann et al.~\cite{hermann2024} demonstrated that protein language model pretraining creates data leakage that distorts downstream task performance by 11.1\%. Their solution---pretraining-aware data splits---addresses the problem at the data level. Ours addresses it at inference time, requiring no retraining.
 
-\paragraph{LLMs for biological analysis.} Hu et al.\ \cite{hu2025} used GPT-4 for gene set function discovery with blinded \textit{human} evaluation of the LLM's outputs. Notably, they did not blind the LLM itself---the model received real gene names and could draw on its training knowledge. Our work completes this design by blinding both sides.
+\paragraph{LLMs for biological analysis.} Hu et al.~\cite{hu2025} used GPT-4 for gene set function discovery with blinded \textit{human} evaluation of the LLM's outputs. Notably, they did not blind the LLM itself---the model received real gene names and could draw on its training knowledge. Our work completes this design by blinding both sides.
 
-% ====================================================================
-% 3. METHOD
-% ====================================================================
+%% ====================================================================
+%% 3. METHOD
+%% ====================================================================
 \section{Method}
 
 \subsection{Protocol}
 
 Epistemic blinding is an inference-time intervention requiring no model modification. Given one or more datasets containing named entities:
 
-\begin{enumerate}[leftmargin=*,itemsep=2pt]
+\begin{enumerate}
 \item \textbf{Identify entity columns.} Determine which columns contain identifiers that may have uneven representation in the LLM's training corpus (gene symbols, tickers, drug names, team names, author names).
 
 \item \textbf{Build a shared mapping.} For each entity type, collect every distinct value across all datasets. Shuffle deterministically with a stable seed and assign anonymous codes of the form \texttt{\{Prefix\}\_\{number\}} (e.g., Gene\_001, Company\_042). The same entity receives the same code everywhere it appears, preserving cross-dataset reasoning.
@@ -121,9 +113,9 @@ The goal is to blind information that activates training priors while preserving
 
 We release an open-source, config-driven tool\footnote{\url{https://github.com/mcuccarese/epistemic-blinding}} comprising three scripts: \texttt{blind.py} (reads a YAML config, produces matched blinded/unblinded prompts plus a mapping file), \texttt{deblind.py} (reverses the mapping in a model response), and \texttt{compare.py} (computes A/B metrics: set overlap, Jaccard index, mean rank delta, Kendall~$\tau$, and optional fame-bias statistics). The tool is model-agnostic and has also been implemented as a Claude Code skill for one-command blinding within agentic workflows.
 
-% ====================================================================
-% 4. ONCOLOGY CASE STUDY
-% ====================================================================
+%% ====================================================================
+%% 4. ONCOLOGY CASE STUDY
+%% ====================================================================
 \section{Case Study: Oncology Drug Target Prioritization}
 
 \subsection{Task and Data}
@@ -147,7 +139,7 @@ For each of four oncology indications spanning a range of feature signal strengt
 \small
 \begin{tabular}{@{}lccc@{}}
 \toprule
-\textbf{Indication} & \textbf{Sig. genes} & \textbf{Targets} & \textbf{Signal} \\
+\textbf{Indication} & \textbf{Sig.\ genes} & \textbf{Targets} & \textbf{Signal} \\
 \midrule
 Acute myeloid leukemia & 30 & 6 & Strong \\
 Pancreatic adenocarcinoma & 32 & 1 & Concentrated \\
@@ -190,19 +182,18 @@ GBM & 75\% & 5 & 5 & 3/3 \\
 
 The most direct evidence of contamination comes from the model's own justifications (Table~\ref{tab:smokinggun}).
 
-% --- Figure 2: Smoking gun table ---
 \begin{table*}[t]
 \centering
 \small
 \begin{tabular}{@{}p{1.8cm}p{6.8cm}p{6.8cm}@{}}
 \toprule
-& \cellcolor{bluepale}\textcolor{blue}{\textbf{Blinded (Gene\_088, ranked \#5)}} & \cellcolor{orangepale}\textcolor{orange}{\textbf{Unblinded (KRAS, ranked \#1)}} \\
+& \cellcolor{ebbluepale}\textcolor{ebblue}{\textbf{Blinded (Gene\_088, ranked \#5)}} & \cellcolor{eborangepale}\textcolor{eborange}{\textbf{Unblinded (KRAS, ranked \#1)}} \\
 \midrule
 \textbf{Opening} & ``Gene\_088 ranks \#5 based on quantitative mutation features'' & ``KRAS ranks \#1 as the most actionable target'' \\
 \addlinespace
 \textbf{Shared reasoning} & \multicolumn{2}{c}{\textit{Both cite: high mutation frequency (38\%), recurrent codon-12 hotspot, strong statistical enrichment, exclusively missense mutations}} \\
 \addlinespace
-\textbf{Additional reasoning} & ``GTPase domain concentrated mutations suggest gain-of-function mechanism'' & \cellcolor{contamination}\textcolor{coral}{\textbf{``Proven therapeutic tractability via covalent RAS inhibitors (sotorasib, adagrasib)''}} \newline \cellcolor{contamination}\textcolor{coral}{\textbf{``Central node in RAS/MAPK pathway with extensive clinical validation''}} \\
+\textbf{Additional reasoning} & ``GTPase domain concentrated mutations suggest gain-of-function mechanism'' & \cellcolor{ebcontamination}\textcolor{ebcoral}{\textbf{``Proven therapeutic tractability via covalent RAS inhibitors (sotorasib, adagrasib)''}} \newline \cellcolor{ebcontamination}\textcolor{ebcoral}{\textbf{``Central node in RAS/MAPK pathway with extensive clinical validation''}} \\
 \addlinespace
 \textbf{Conclusion} & ``Exceptionally high recurrence at a single hotspot with strong functional convergence'' & ``KRAS is the defining oncogenic driver in CRC with validated druggability and multiple approved therapies'' \\
 \bottomrule
@@ -213,14 +204,14 @@ The most direct evidence of contamination comes from the model's own justificati
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.65\textwidth]{figures/fig3_slope_chart.png}
+\includegraphics[width=0.6\textwidth]{figures/fig3_slope_chart.png}
 \caption{Rank-shift slope chart for IDH-wildtype glioblastoma. Lines connect the same gene's rank in the blinded (left) and unblinded (right) conditions. Orange: famous genes promoted when named. Blue: obscure genes with strong features demoted when named.}
 \label{fig:slope}
 \end{figure*}
 
-% ====================================================================
-% 5. S&P 500 CASE STUDY
-% ====================================================================
+%% ====================================================================
+%% 5. S&P 500 CASE STUDY
+%% ====================================================================
 \section{Case Study: S\&P 500 Value Screening}
 
 To test generalizability, we applied the protocol to equity analysis. An LLM was asked to rank the 20 most attractive value investments from $\sim$500 S\&P~500 companies, given four layers of fundamentals: valuation (P/E, P/S, P/B, EV/EBITDA, PEG, FCF yield), growth (revenue, earnings), quality (margins, ROE, ROA, leverage), and shareholder returns (dividend yield). Because market capitalization and sector together can identify most mega-cap stocks, all features were normalized. Ticker symbols were the only entity column blinded.
@@ -253,9 +244,9 @@ On average, 7 of the top~20 change when tickers are revealed---a 35\% reshaping 
 \label{fig:sp500}
 \end{figure}
 
-% ====================================================================
-% 6. DISCUSSION
-% ====================================================================
+%% ====================================================================
+%% 6. DISCUSSION
+%% ====================================================================
 \section{Discussion}
 
 \subsection{Auditability, Not Accuracy}
@@ -278,21 +269,21 @@ A practical heuristic: if you would blind a human analyst performing the same ta
 
 \paragraph{Semantically meaningful names.} In some domains, names encode information (IUPAC chemical names, drug suffixes). Blinding these destroys legitimate signal. The protocol should be applied to identity, not to functional nomenclature.
 
-% ====================================================================
-% 7. LIMITATIONS
-% ====================================================================
+%% ====================================================================
+%% 7. LIMITATIONS
+%% ====================================================================
 \section{Limitations}
 
-\begin{enumerate}[leftmargin=*,itemsep=2pt]
+\begin{enumerate}
 \item \textbf{Single model.} All experiments used Claude (Anthropic). The magnitude of contamination may differ across models.
 \item \textbf{Binary comparison.} We compared fully blinded vs.\ fully unblinded. Partial blinding is unexplored.
 \item \textbf{No ground truth for novel candidates.} We can measure that the discovery frontier shifts but cannot determine which frontier is ``better'' without prospective validation.
 \item \textbf{Run-to-run variance.} The S\&P~500 experiment used five seeds; the oncology experiment used single runs per indication.
 \end{enumerate}
 
-% ====================================================================
-% 8. CONCLUSION
-% ====================================================================
+%% ====================================================================
+%% 8. CONCLUSION
+%% ====================================================================
 \section{Conclusion}
 
 Revealing entity identifiers to an LLM during data-driven analysis systematically biases its outputs toward well-known entities and away from conclusions supported by the data alone. The intervention to detect this---epistemic blinding---is trivially simple, requires no model modification, and preserves the model's analytical reasoning capabilities.
@@ -303,10 +294,10 @@ We propose that epistemic blinding should become standard practice whenever LLMs
 
 \paragraph{Code availability.} The epistemic blinding tool, including configuration schemas, worked examples, and comparison scripts, is available at \url{https://github.com/mcuccarese/epistemic-blinding}.
 
-% ====================================================================
-% REFERENCES
-% ====================================================================
-\bibliographystyle{plain}
+%% ====================================================================
+%% REFERENCES
+%% ====================================================================
+\bibliographystyle{ACM-Reference-Format}
 \begin{thebibliography}{12}
 
 \bibitem{oren2024}
