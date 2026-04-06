@@ -28,6 +28,9 @@
   urlcolor=ebblue,
 }
 
+%% Prevent overfull hbox (words running past margin)
+\emergencystretch=1em
+
 %% ====================================================================
 \begin{document}
 
@@ -162,7 +165,7 @@ IDH-wildtype glioblastoma & 110 & 3 & Weak \\
 \small
 \begin{tabular}{@{}lcccc@{}}
 \toprule
-& \textbf{Overlap} & \textbf{Only B} & \textbf{Only U} & \textbf{Tgt} \\
+& \textbf{Overlap} & \textbf{Only Blind} & \textbf{Only Unblind} & \textbf{Targets} \\
 \midrule
 AML & 90\% & 2 & 2 & 6/6 \\
 Pancreatic & 80\% & 4 & 4 & 1/1 \\
@@ -172,7 +175,7 @@ GBM & 75\% & 5 & 5 & 3/3 \\
 \textbf{Average} & \textbf{84\%} & 3.25 & 3.25 & 2.75 \\
 \bottomrule
 \end{tabular}
-\caption{Set overlap between blinded and unblinded top-20 lists. Target recovery (rightmost column) is identical in both conditions.}
+\caption{Set overlap between blinded and unblinded top-20 lists. Target recovery is identical in both conditions.}
 \label{tab:overlap}
 \end{table}
 
