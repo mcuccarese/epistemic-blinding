@@ -10,6 +10,7 @@
 \usepackage{xcolor}
 \usepackage{colortbl}
 \usepackage{makecell}
+\usepackage{array}
 \usepackage{placeins}
 \usepackage{listings}
 
@@ -241,7 +242,7 @@ GBM & 75\% & 5 & 5 & 3/3 \\
 \centering
 \footnotesize
 \setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}llcccp{2.8cm}@{}}
+\begin{tabular}{@{}llccc>{\raggedright\arraybackslash}p{2.8cm}@{}}
 \toprule
 \textbf{Gene} & \textbf{Indication} & \textbf{Blinded} & \textbf{Unblinded} & \textbf{Shift} & \textbf{What the model cited} \\
 \midrule
