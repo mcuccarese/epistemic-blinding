@@ -462,8 +462,127 @@ def make_fig4():
 
 
 # ===================================================================
+# FIGURE 5: ShinkaEvolve Evolution Timeline
+# ===================================================================
+
+def make_fig5():
+    """Evolution trace: from naive baseline to hierarchical scoring."""
+
+    generations = [
+        {"gen": "Gen 0", "title": "Max-of-3 enrichment",
+         "code": "score = max(esm2, gf, pt)",
+         "fitness": 68, "color": GRAY_LIGHT, "textcolor": GRAY_DARK},
+        {"gen": "Gen 3", "title": "Geometric mean\nrewards convergence",
+         "code": "score = (e1 * e2 * e3)^(1/3)",
+         "fitness": 77, "color": BLUE_PALE, "textcolor": "#0D4F8B"},
+        {"gen": "Gen 6", "title": "Sigmoid gates filter\nunreliable enrichments",
+         "code": "gate = 1/(1+exp(-0.5*(n-5)))",
+         "fitness": 82, "color": BLUE_PALE, "textcolor": "#0D4F8B"},
+        {"gen": "Gen 9", "title": "Disease routing:\nonc vs. non-onc branches",
+         "code": "score = where(is_onc, onc_fn, non_fn)",
+         "fitness": 76, "color": BLUE_PALE, "textcolor": "#0D4F8B"},
+        {"gen": "Gen 12", "title": "Evidence-first\nhierarchical tiers",
+         "code": "tier1*8 + tier1*conv*2 + tier1*pLI*1.5",
+         "fitness": 79, "color": "#E3F2FD", "textcolor": BLUE,
+         "hit_rate": "10/18"},
+    ]
+
+    fig, axes = plt.subplots(1, 2, figsize=(10, 5.5),
+                              gridspec_kw={"width_ratios": [3, 1.2]})
+    ax = axes[0]   # timeline
+    ax2 = axes[1]  # fitness curve
+
+    ax.set_xlim(-0.3, 1.3)
+    ax.set_ylim(-0.5, len(generations) - 0.5)
+    ax.invert_yaxis()
+    ax.axis("off")
+
+    # Title
+    ax.text(0.5, -0.35, "Evolution Trace: Blinded Feature Optimization",
+            ha="center", va="center", fontsize=12, fontweight="bold")
+
+    # Vertical line
+    x_line = 0.08
+    ax.plot([x_line, x_line], [0, len(generations) - 1], color=BLUE_LIGHT,
+            linewidth=3, solid_capstyle="round", zorder=1)
+
+    for i, g in enumerate(generations):
+        y = i
+
+        # Dot on timeline
+        dot_color = ORANGE if g.get("hit_rate") else BLUE
+        ax.plot(x_line, y, "o", color=dot_color, markersize=10, zorder=3,
+                markeredgecolor="white", markeredgewidth=1.5)
+
+        # Generation label
+        ax.text(x_line + 0.05, y - 0.18, g["gen"],
+                fontsize=7.5, fontweight="bold", color=GRAY, va="center")
+
+        # Title
+        ax.text(x_line + 0.05, y + 0.02, g["title"],
+                fontsize=9, fontweight="bold", color=g["textcolor"],
+                va="center", linespacing=1.2)
+
+        # Code snippet box
+        code_box = FancyBboxPatch((0.45, y - 0.15), 0.52, 0.3,
+                                   boxstyle="round,pad=0.02",
+                                   facecolor="#F5F5F5", edgecolor="#DDDDDD",
+                                   linewidth=0.8, zorder=2)
+        ax.add_patch(code_box)
+        ax.text(0.71, y, g["code"],
+                ha="center", va="center", fontsize=7.5,
+                fontfamily="monospace", color="#333333", zorder=3)
+
+        # Hit rate badge for Gen 12
+        if g.get("hit_rate"):
+            ax.text(1.05, y, f"Hit rate:\n{g['hit_rate']}",
+                    ha="center", va="center", fontsize=7.5,
+                    fontweight="bold", color=ORANGE,
+                    bbox=dict(boxstyle="round,pad=0.2", facecolor="#FFF3E0",
+                              edgecolor=ORANGE, alpha=0.8))
+
+    # Annotation at bottom
+    ax.text(0.5, len(generations) - 0.1 + 0.4,
+            "All generations operate on blinded numerical features (indices 0\u201321).\n"
+            "No gene name, disease name, or drug name is visible at any point.",
+            ha="center", va="center", fontsize=7.5, color=GRAY,
+            fontstyle="italic", linespacing=1.4)
+
+    # --- Right panel: fitness curve ---
+    ax2.set_xlim(55, 90)
+    ax2.set_ylim(len(generations) - 0.5, -0.5)
+
+    fitnesses = [g["fitness"] for g in generations]
+    ys = list(range(len(generations)))
+
+    # Fill area
+    ax2.fill_betweenx(ys, 55, fitnesses, color=BLUE_PALE, alpha=0.4, step="mid")
+    ax2.plot(fitnesses, ys, "o-", color=BLUE, markersize=7,
+             linewidth=1.5, zorder=3, markeredgecolor="white", markeredgewidth=1)
+
+    for i, (f, y) in enumerate(zip(fitnesses, ys)):
+        ax2.text(f + 1.2, y, f"{f}%", va="center", fontsize=8,
+                 color=BLUE, fontweight="bold")
+
+    ax2.set_xlabel("Fitness (%)", fontsize=9)
+    ax2.set_yticks([])
+    ax2.spines["top"].set_visible(False)
+    ax2.spines["right"].set_visible(False)
+    ax2.spines["left"].set_visible(False)
+    ax2.tick_params(axis="x", labelsize=8)
+    ax2.set_title("Mean Percentile\nof Approved Targets", fontsize=9,
+                   fontweight="bold", pad=8)
+
+    fig.tight_layout(w_pad=1)
+    fig.savefig("paper/figures/fig5_evolution.png")
+    print("Saved: paper/figures/fig5_evolution.png")
+    plt.close(fig)
+
+
+# ===================================================================
 if __name__ == "__main__":
     make_fig1()
     make_fig3()
     make_fig4()
+    make_fig5()
     print("Done.")
