@@ -1,0 +1,20 @@
+1. Gene_085 - Highest mutation frequency (28.6%) combined with full constraint (pLI=1.0) and protein function enrichment (PT=20.9) across a large network (819), making it the strongest multi-signal AML driver.
+2. Gene_010 - High mutation frequency (8.0%) with near-full constraint (pLI=0.94) and exceptional structural enrichment (ESM2=167.5) plus protein function signal (PT=13.7), indicating strong biological convergence.
+3. Gene_016 - Very high mutation frequency (27.1%) in a fully constrained gene (pLI=1.0) with a substantial network (551), marking it as a key recurrent AML driver.
+4. Gene_088 - Mutated (5.0%) and fully constrained, with outstanding structural similarity enrichment (ESM2=223.3) and protein function enrichment (PT=13.7), showing disease-associated neighbors across two independent modalities.
+5. Gene_052 - High mutation frequency (10.6%) in a highly constrained gene (pLI=0.98) with protein function enrichment (PT=13.7) and 274 neighbors, converging on driver status.
+6. Gene_055 - High mutation frequency (7.5%) in a fully constrained gene with 1,000 experimental neighbors, suggesting broad pathway centrality in AML.
+7. Gene_043 - Mutated (4.0%), fully constrained, with protein function enrichment (PT=17.2) and a very large neighbor network (946), implicating it in essential AML biology.
+8. Gene_009 - Mutated (6.5%) and fully constrained with 1,164 neighbors, indicating a highly connected essential gene recurrently targeted in AML.
+9. Gene_031 - Mutated (5.0%) and fully constrained with moderate structural enrichment (ESM2=3.9) and 314 neighbors, providing multi-signal support.
+10. Gene_036 - High mutation frequency (9.5%) with dual enrichment signals in structural (ESM2=7.7) and protein function (PT=16.7) domains despite low constraint, suggesting a gain-of-function or context-dependent driver.
+11. Gene_057 - Very high mutation frequency (25.1%) strongly implicates it as a recurrently mutated AML driver, likely a gain-of-function target where low pLI is expected.
+12. Gene_029 - High mutation frequency (9.5%) with a large network (577 neighbors), suggesting involvement in AML-relevant pathways.
+13. Gene_098 - Mutated (3.0%) and fully constrained with structural enrichment (ESM2=5.7) and 156 neighbors providing experimental validation of disease relevance.
+14. Gene_084 - Mutated (3.0%) and fully constrained with 358 neighbors, consistent with a network-connected essential gene disrupted in AML.
+15. Gene_019 - Fully constrained with exceptional transcriptomic (GF=223.3) and protein function (PT=60.9) enrichment and the second-largest network (1,691), indicating a critical AML dependency gene even without recurrent mutation.
+16. Gene_095 - Mutated (3.5%) and fully constrained with 183 neighbors, supporting its role as an essential gene disrupted in AML.
+17. Gene_050 - High mutation frequency (8.5%) indicates recurrent somatic targeting in AML, likely a driver despite lack of constraint signal.
+18. Gene_046 - Mutated (3.5%) and fully constrained (pLI=1.0), consistent with loss-of-function intolerance in a gene recurrently hit in AML.
+19. Gene_049 - Fully constrained with very high protein function enrichment (PT=111.7) and the third-largest network (1,473), marking it as a critical hub in AML-relevant pathways and a potential synthetic-lethality target.
+20. Gene_045 - Mutated (3.0%) and fully constrained, rounding out the set of essential genes with evidence of recurrent disruption in AML.

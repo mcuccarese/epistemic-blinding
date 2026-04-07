@@ -1,0 +1,20 @@
+1. Gene_010 - Dominant driver with the highest mutation frequency (85.1%), full constraint, and protein-function enrichment (PT=10.6) across a large network.
+2. Gene_016 - Triple-modality convergence (ESM2=15.4, GF=67.0, PT=14.5) with full constraint makes this an exceptionally well-validated essential target.
+3. Gene_052 - Second-highest mutation frequency (79.9%), fully constrained, and highly connected (n=1000), indicating a major driver gene.
+4. Gene_040 - Highest structural enrichment of any gene (ESM2=67.0) combined with strong protein-function signal (PT=17.2) and full constraint.
+5. Gene_088 - Very high mutation frequency (42.1%) with full constraint and strong structural enrichment (ESM2=22.3), pointing to a recurrent constrained driver.
+6. Gene_020 - Triple convergence (GF=67.0, PT=12.2, ESM2=2.4), high constraint (pLI=0.91), and the largest network in this group (n=1252).
+7. Gene_036 - High mutation frequency (21.6%), fully constrained, and well-connected (n=666), consistent with a frequently altered essential gene.
+8. Gene_031 - Very high dual enrichment (ESM2=38.3, PT=24.1) with full constraint indicates strong structural and functional disease relevance.
+9. Gene_019 - High dual enrichment (ESM2=22.3, PT=19.1), fully constrained, with above-average mutation rate (5.8%).
+10. Gene_024 - Triple convergence (GF=67.0, ESM2=3.3, PT=6.1), fully constrained, with a substantial network (n=447).
+11. Gene_057 - High mutation frequency (12.2%) with triple-modality convergence (GF=4.2, PT=2.9, ESM2=1.5), full constraint, and large network (n=733).
+12. Gene_009 - Good mutation rate (6.1%), fully constrained, dual enrichment (ESM2=6.3, PT=21.2), and very large network (n=1012).
+13. Gene_055 - Very high structural enrichment (ESM2=38.3) with strong protein-function signal (PT=17.9) and full constraint.
+14. Gene_029 - Very high dual enrichment (ESM2=33.5, PT=22.3) with full constraint, indicating deep structural and functional disease association.
+15. Gene_050 - High mutation frequency (13.1%), fully constrained with moderate structural enrichment (ESM2=3.5) and sizeable network (n=353).
+16. Gene_046 - High dual enrichment (ESM2=25.8, PT=19.4), fully constrained, with a well-connected neighborhood (n=140).
+17. Gene_043 - Above-average mutation rate (7.3%), fully constrained, high protein-function enrichment (PT=23.6), and large network (n=755).
+18. Gene_011 - Triple-modality convergence (ESM2=16.7, GF=3.0, PT=1.4) with near-full constraint (pLI=0.94) and good mutation rate (7.0%).
+19. Gene_078 - Strong dual enrichment (ESM2=10.8, PT=22.8), fully constrained, with a reasonable network (n=110).
+20. Gene_085 - Highest triple-modality convergence among unconstrained genes (ESM2=18.0, GF=22.3, PT=18.8); the exceptional experimental convergence across all three modalities compensates for low pLI.

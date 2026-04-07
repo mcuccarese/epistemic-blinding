@@ -66,10 +66,9 @@ The tool is model-agnostic: it operates on prompt text, not API internals.
 
 | Example | Description | Data |
 |---------|-------------|------|
-| [stocks_demo](examples/stocks_demo/) | Minimal synthetic example (20 companies) | Included |
-| [sp500_value_screen](examples/sp500_value_screen/) | Full S&P 500 fundamentals, 5-seed experiment with results | Included |
-
-The S&P 500 example includes complete blinded/unblinded responses and comparison reports across 5 random seeds, as reported in the paper.
+| [oncology](examples/oncology/) | Full 4-indication blinding experiment from the paper: prompts, responses, answer key, comparison script, and key ShinkaEvolve evolution candidates (gen0 through gen12) | Included |
+| [sp500_value_screen](examples/sp500_value_screen/) | S&P 500 fundamentals, 5-seed experiment with complete responses and comparison reports | Included |
+| [stocks_demo](examples/stocks_demo/) | Minimal synthetic example (20 companies) for getting started | Included |
 
 ## Claude Code Skill
 

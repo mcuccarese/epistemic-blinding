@@ -1,0 +1,118 @@
+[
+  {
+    "indication": "Acute myeloid leukemia",
+    "overlap": 18,
+    "overlap_pct": "90%",
+    "blinded_targets_found": 6,
+    "unblinded_targets_found": 6,
+    "blinded_famous_in_top20": 9,
+    "unblinded_famous_in_top20": 9,
+    "famous_mean_rank_blinded": 5.8,
+    "famous_mean_rank_unblinded": 6.2,
+    "famous_ONLY_in_unblinded": [],
+    "obscure_ONLY_in_blinded": [
+      "DROSHA",
+      "SLIT2"
+    ],
+    "only_in_unblinded": [
+      "CEBPA",
+      "RAD21"
+    ],
+    "only_in_blinded": [
+      "DROSHA",
+      "SLIT2"
+    ]
+  },
+  {
+    "indication": "IDH-wildtype glioblastoma",
+    "overlap": 15,
+    "overlap_pct": "75%",
+    "blinded_targets_found": 3,
+    "unblinded_targets_found": 3,
+    "blinded_famous_in_top20": 5,
+    "unblinded_famous_in_top20": 7,
+    "famous_mean_rank_blinded": 6.2,
+    "famous_mean_rank_unblinded": 4.1,
+    "famous_ONLY_in_unblinded": [
+      "PDGFRA",
+      "RB1"
+    ],
+    "obscure_ONLY_in_blinded": [
+      "COL1A1",
+      "COL28A1",
+      "COL3A1",
+      "DSG3",
+      "SCN9A"
+    ],
+    "only_in_unblinded": [
+      "PDGFRA",
+      "PIK3CB",
+      "PIK3R1",
+      "RB1",
+      "SETD2"
+    ],
+    "only_in_blinded": [
+      "COL1A1",
+      "COL28A1",
+      "COL3A1",
+      "DSG3",
+      "SCN9A"
+    ]
+  },
+  {
+    "indication": "Pancreatic adenocarcinoma",
+    "overlap": 16,
+    "overlap_pct": "80%",
+    "blinded_targets_found": 1,
+    "unblinded_targets_found": 1,
+    "blinded_famous_in_top20": 6,
+    "unblinded_famous_in_top20": 7,
+    "famous_mean_rank_blinded": 5.3,
+    "famous_mean_rank_unblinded": 6.7,
+    "famous_ONLY_in_unblinded": [
+      "ATM"
+    ],
+    "obscure_ONLY_in_blinded": [
+      "ADAMTS12",
+      "ADAMTS16",
+      "COL5A1",
+      "PCDH9"
+    ],
+    "only_in_unblinded": [
+      "ACVR2A",
+      "ATM",
+      "GLI3",
+      "HDAC4"
+    ],
+    "only_in_blinded": [
+      "ADAMTS12",
+      "ADAMTS16",
+      "COL5A1",
+      "PCDH9"
+    ]
+  },
+  {
+    "indication": "Chromosomally unstable colorectal cancer",
+    "overlap": 18,
+    "overlap_pct": "90%",
+    "blinded_targets_found": 1,
+    "unblinded_targets_found": 1,
+    "blinded_famous_in_top20": 7,
+    "unblinded_famous_in_top20": 7,
+    "famous_mean_rank_blinded": 8.6,
+    "famous_mean_rank_unblinded": 4.0,
+    "famous_ONLY_in_unblinded": [],
+    "obscure_ONLY_in_blinded": [
+      "GRIA1",
+      "MMP16"
+    ],
+    "only_in_unblinded": [
+      "SOX9",
+      "TCF7L2"
+    ],
+    "only_in_blinded": [
+      "GRIA1",
+      "MMP16"
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+1. TP53 - Highest combined signal: very high mutation frequency (30%), full constraint (pLI=1.0), and convergent structural (ESM2=2.2) and functional (PT=10.1) enrichment across 1,000 neighbors.
+2. EGFR - Second-highest mutation frequency (28.3%) with near-full constraint (pLI=0.98), making it the canonical amplified/mutated receptor tyrosine kinase target in IDH-wt GBM.
+3. PTEN - Highest mutation frequency in the dataset (35.8%); the defining PI3K/AKT pathway tumor suppressor lost in GBM, despite low pLI reflecting its haploinsufficient biology.
+4. PIK3CA - High mutation frequency (10%), full constraint, and strong dual enrichment (ESM2=3.1, PT=13.5) converging on the actionable PI3K catalytic subunit.
+5. NF1 - Elevated mutation frequency (11.7%) with full constraint and functional enrichment (PT=3.8); a key RAS-GAP and established GBM driver gene.
+6. RB1 - Notable mutation frequency (7.5%) with full constraint; core cell-cycle gatekeeper whose loss defines a GBM subgroup.
+7. PIK3R1 - Moderately high mutation frequency (5.8%) with full constraint; the PI3K regulatory subunit frequently co-altered with PTEN in GBM.
+8. PDGFRA - Mutated (4.2%), fully constrained, structurally enriched (ESM2=2.1), and connected to the largest neighbor network (1,271); a known GBM receptor tyrosine kinase target.
+9. DPP8 - Despite no somatic mutations, extraordinary triple-modality enrichment (ESM2=60.9, GF=30.5, PT=16.6) with full constraint identifies this druggable peptidase as a potential synthetic-essential target in GBM.
+10. PIK3CG - Mutated (5.0%) with very high functional enrichment (PT=21.5) and structural signal (ESM2=1.5); another actionable PI3K family kinase reinforcing pathway dependency.
+11. TRPV6 - Mutated (4.2%) with the strongest triple-modality convergence among mutated genes (ESM2=3.1, GF=14.1, PT=10.7) and 774 neighbors, indicating robust experimental support.
+12. CACNA1S - Mutated (5.0%) with very high structural enrichment (ESM2=16.6) and strong functional signal (PT=13.7), pointing to calcium signaling as a convergent vulnerability.
+13. SLIT3 - Mutated (4.2%) with near-full constraint (pLI=0.97) and dual enrichment (ESM2=2.1, PT=8.7); axon guidance signaling is directly relevant to glial tumor biology.
+14. PIK3CB - Fully constrained PI3K catalytic subunit with very high functional enrichment (PT=15.2), further reinforcing the PI3K pathway as a multi-gene target axis.
+15. SETD2 - Mutated (4.2%) and fully constrained histone H3K36 methyltransferase with functional enrichment (PT=4.1); an actionable epigenetic regulator recurrently altered across cancers.
+16. DPP10 - Fully constrained (pLI=1.0) with strong dual enrichment (ESM2=5.3, PT=10.7) and a large neighbor network (682), suggesting network-level essentiality.
+17. ARHGEF5 - Higher mutation frequency (5.0%), full constraint, dual enrichment (ESM2=1.5, PT=4.3), and 1,019 neighbors; a Rho-GEF linking cytoskeletal signaling to proliferation.
+18. TRPV5 - Mutated with triple-modality enrichment (ESM2=3.0, GF=3.3, PT=10.4) and the second-largest neighbor network among mutated genes (1,294), reinforcing the calcium channel vulnerability theme.
+19. CACNA2D1 - Mutated (4.2%) and fully constrained with very high functional enrichment (PT=14.1); a calcium channel auxiliary subunit and potential mediator of GBM excitability.
+20. TENM3 - Fully constrained (pLI=1.0) with extremely high functional domain enrichment (PT=45.7) across 180 neighbors; a teneurin with neurodevelopmental roles directly relevant to glial lineage.

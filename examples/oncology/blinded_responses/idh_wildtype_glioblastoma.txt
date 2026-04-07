@@ -1,0 +1,20 @@
+1. Gene_010 - Highest-impact multi-signal gene: very high mutation frequency (0.300), fully constrained (pLI=1.00), with structural (2.2) and functional (10.1) enrichment across a large 1000-neighbor network.
+2. Gene_085 - Strong driver with high mutation rate (0.100), full constraint (pLI=1.00), and robust dual enrichment in protein structure (3.1) and function (13.5) across 666 neighbors.
+3. Gene_087 - Extraordinary triple convergence (ESM2=60.9, GF=30.5, PT=16.6) with full constraint (pLI=1.00), indicating a deeply disease-embedded essential gene even without somatic mutations.
+4. Gene_018 - Extreme triple convergence (ESM2=36.5, GF=45.7, PT=11.4) with full constraint, implicating it as a central node in glioblastoma biology through non-mutational mechanisms.
+5. Gene_093 - Fully constrained with the highest Geneformer enrichment (60.9) plus strong structural (15.2) and functional (10.7) enrichment, pointing to a transcriptomically central essential gene.
+6. Gene_052 - High mutation frequency (0.117) with full constraint (pLI=1.00) and functional enrichment (3.8) across 358 neighbors, marking it as a likely essential driver.
+7. Gene_088 - Second-highest mutation rate (0.283) combined with near-full constraint (pLI=0.98), strongly suggesting a constrained driver gene even without enrichment signals.
+8. Gene_016 - Best triple enrichment among mutated genes (ESM2=3.1, GF=14.1, PT=10.7) with 774 neighbors, demonstrating convergent disease association across all experimental modalities.
+9. Gene_055 - Fully constrained driver with strong structural (5.3) and functional (10.7) enrichment across 682 neighbors, combining essentiality with broad experimental convergence.
+10. Gene_029 - Near-fully constrained (pLI=0.97) mutated gene with dual structural (2.1) and functional (8.7) enrichment, providing multi-layered target validation.
+11. Gene_019 - Constrained driver (pLI=1.00, mut=0.050) with dual enrichment (ESM2=1.5, PT=4.3) and one of the largest networks (1019 neighbors), suggesting broad biological relevance.
+12. Gene_009 - Triple-enriched mutated gene (ESM2=3.0, GF=3.3, PT=10.4) with the most neighbors in the dataset (1294), indicating a highly connected disease-associated node.
+13. Gene_036 - Elevated mutation (0.050) with very high structural enrichment (16.6) and strong functional enrichment (13.7), suggesting the protein structure neighborhood is deeply implicated in GBM.
+14. Gene_098 - Fully constrained with exceptionally high functional enrichment (PT=45.7), indicating its protein domain family is massively over-represented among disease-associated genes.
+15. Gene_057 - Highest mutation frequency in the dataset (0.358), making it almost certainly a major driver gene despite low constraint, potentially a tumor suppressor targetable via synthetic lethality.
+16. Gene_070 - Extreme triple convergence (ESM2=22.8, GF=60.9, PT=7.5) across 555 neighbors without somatic mutations, identifying a non-mutated but deeply disease-connected hub.
+17. Gene_031 - Fully constrained (pLI=1.00) mutated gene with high functional enrichment (PT=14.1), combining essentiality with strong protein-domain-level disease association.
+18. Gene_011 - Strong dual enrichment in structure (ESM2=9.0) and function (PT=9.9) among mutated genes, indicating convergent neighborhood-level disease signal.
+19. Gene_043 - Elevated mutation (0.050) with very high functional enrichment (PT=21.5) and 393 neighbors, suggesting its functional domain is a recurring target in GBM.
+20. Gene_007 - Mutated gene with strong structural (3.1) and very high functional (15.2) enrichment across 570 neighbors, providing robust dual-modality convergent evidence.
