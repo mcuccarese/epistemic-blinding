@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.30)  7 APR 2026 00:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.30)  7 APR 2026 01:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1131,128 +1131,163 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.6pt on input line 132.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 5.5pt on input line 132.
-
-Underfull \hbox (badness 1859) in paragraph at lines 132--133
-\T1/LinuxLibertineT-TLF/m/n/9 (+20) scripts: \T1/zi4/m/n/9 blind.py \T1/LinuxLi
-bertineT-TLF/m/n/9 (+20) (reads a YAML con-fig, pro-duces matched
- []
-
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 146.
+(Font)              scaled to size 9.0pt on input line 145.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 146.
+(Font)              scaled to size 7.0pt on input line 145.
 [2.2{C:/Users/mcucc/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i
 4-t1-4.enc}]
-Underfull \hbox (badness 1221) in paragraph at lines 147--148
-[]\T1/LinuxLibertineT-TLF/m/n/9 (+20) Literature-mined gene--disease re-la-tion
--ships, pre-annotated
- []
+Underfull \vbox (badness 2096) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+ [3.3 <./figures/fig1_method.png>]
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 8.0pt on input line 164.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 168.
+surrounding objects on input line 167.
 
-
-Underfull \vbox (badness 2285) has occurred while \output is active []
-
- [3.3 <./figures/fig1_method.png>]
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 181.
+surrounding objects on input line 174.
 
-<figures/fig5_evolution.png, id=172, 729.6861pt x 402.5439pt>
-File: figures/fig5_evolution.png Graphic file (type png)
-<use figures/fig5_evolution.png>
-Package pdftex.def Info: figures/fig5_evolution.png  used on input line 188.
-(pdftex.def)             Requested size: 241.14749pt x 133.0303pt.
 
-Class acmart Warning: A possible image without description on input line 191.
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 186.
+
+
+Underfull \vbox (badness 6157) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 199.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 200.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 200.
+(Font)              scaled to size 8.0pt on input line 201.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 201.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 8.0pt on input line 200.
+(Font)              scaled to size 8.0pt on input line 201.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 6.0pt on input line 200.
+(Font)              scaled to size 6.0pt on input line 201.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.0pt on input line 200.
+(Font)              scaled to size 8.0pt on input line 201.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.0pt on input line 200.
+(Font)              scaled to size 6.0pt on input line 201.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.0pt on input line 200.
+(Font)              scaled to size 8.0pt on input line 201.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.0pt on input line 200.
+(Font)              scaled to size 6.0pt on input line 201.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.0pt on input line 200.
+(Font)              scaled to size 8.0pt on input line 201.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.0pt on input line 200.
+(Font)              scaled to size 6.0pt on input line 201.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.0pt on input line 200.
+(Font)              scaled to size 8.0pt on input line 201.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.0pt on input line 200.
+(Font)              scaled to size 6.0pt on input line 201.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.0pt on input line 200.
+(Font)              scaled to size 8.0pt on input line 201.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.0pt on input line 200.
+(Font)              scaled to size 6.0pt on input line 201.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.0pt on input line 200.
+(Font)              scaled to size 8.0pt on input line 201.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.0pt on input line 200.
+(Font)              scaled to size 6.0pt on input line 201.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 202.
+(Font)              scaled to size 8.0pt on input line 203.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 7.0pt on input line 251.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 253.
+(Font)              scaled to size 7.0pt on input line 246.
 
-Underfull \hbox (badness 3291) in paragraph at lines 255--255
-[]|\T1/LinuxLibertineT-TLF/m/n/7 (+20) ``GTPase do-main mu-ta-tions
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
+[]|\T1/LinuxLibertineT-TLF/m/n/7 (+20) ``the defin-ing PI3K/AKT
  []
 
 
-Underfull \hbox (badness 4328) in paragraph at lines 257--258
-[]|\T1/LinuxLibertineT-TLF/m/n/7 (+20) ``Defining dri-ver with val-i-
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+[]|\T1/LinuxLibertineT-TLF/m/n/7 (+20) ``Wnt-pathway con-ver-
  []
 
-<figures/fig3_slope_chart.png, id=175, 513.117pt x 623.2083pt>
-File: figures/fig3_slope_chart.png Graphic file (type png)
-<use figures/fig3_slope_chart.png>
-Package pdftex.def Info: figures/fig3_slope_chart.png  used on input line 268.
-(pdftex.def)             Requested size: 241.14749pt x 292.88892pt.
 
-Class acmart Warning: A possible image without description on input line 271.
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
+[]|\T1/LinuxLibertineT-TLF/m/n/7 (+20) ``proven ther-a-peu-tic
+ []
+
+
+Underfull \hbox (badness 1418) in paragraph at lines 251--252
+[]|\T1/LinuxLibertineT-TLF/m/n/7 (+20) Highest triple en-rich-ment
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+\T1/LinuxLibertineT-TLF/m/n/7 (+20) in dataset (ESM2=60.9,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+[]|\T1/LinuxLibertineT-TLF/m/n/7 (+20) Triple con-ver-gence,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+\T1/LinuxLibertineT-TLF/m/n/7 (+20) pLI=0.91, 1252 neigh-
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4.4 <./figures/fig5_evolution.png>]
+[4.4]
+Underfull \hbox (badness 3635) in paragraph at lines 275--276
+[]\T1/LinuxLibertineT-TLF/m/n/9 (+20) KRAS: ``Highest-impact drug-gable onco-ge
+ne...
+ []
+
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 7.0pt on input line 288.
+
+Underfull \hbox (badness 3291) in paragraph at lines 290--290
+[]|\T1/LinuxLibertineT-TLF/m/n/7 (+20) ``GTPase do-main mu-ta-tions
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 292--293
+[]|\T1/LinuxLibertineT-TLF/m/n/7 (+20) ``Defining dri-ver with val-i-
+ []
+
+<figures/fig3_slope_chart.png, id=193, 513.117pt x 623.2083pt>
+File: figures/fig3_slope_chart.png Graphic file (type png)
+<use figures/fig3_slope_chart.png>
+Package pdftex.def Info: figures/fig3_slope_chart.png  used on input line 303.
+(pdftex.def)             Requested size: 241.14749pt x 292.88892pt.
+
+Class acmart Warning: A possible image without description on input line 306.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 282.
+surrounding objects on input line 319.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 298.
+surrounding objects on input line 335.
 
-<figures/fig4_sp500.png, id=195, 515.0442pt x 406.8801pt>
+[5.5 <./figures/fig3_slope_chart.png>]
+<figures/fig4_sp500.png, id=203, 515.0442pt x 406.8801pt>
 File: figures/fig4_sp500.png Graphic file (type png)
 <use figures/fig4_sp500.png>
-Package pdftex.def Info: figures/fig4_sp500.png  used on input line 306.
+Package pdftex.def Info: figures/fig4_sp500.png  used on input line 343.
 (pdftex.def)             Requested size: 241.14749pt x 190.50728pt.
 
-Class acmart Warning: A possible image without description on input line 309.
 
-[5.5 <./figures/fig3_slope_chart.png> <./figures/fig4_sp500.png>]
+Class acmart Warning: A possible image without description on input line 346.
+
+
+Underfull \vbox (badness 1648) has occurred while \output is active []
+
+ [6.6 <./figures/fig4_sp500.png>]
 
 Class acmart Warning: Some images may lack descriptions.
 (acmart)              ACM is committed to complying with the upcoming US ADA ht
@@ -1279,22 +1314,22 @@ File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (C:\Users\mcucc\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [6.6] (main.aux)
+) [7.7] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6C56005E3A20D2930762C3A41FC21EEF;3960.
+(rerunfilecheck)             Checksum: D2104F24ED57D9473B90996769838A5C;4210.
  ) 
 Here is how much of TeX's memory you used:
- 23227 strings out of 467867
- 373777 string characters out of 5418334
- 878070 words of memory out of 5000000
- 51091 multiletter control sequences out of 15000+600000
- 791100 words of font info for 374 fonts, out of 8000000 for 9000
+ 23231 strings out of 467867
+ 373690 string characters out of 5418334
+ 916949 words of memory out of 5000000
+ 51087 multiletter control sequences out of 15000+600000
+ 791695 words of font info for 376 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,13n,131p,1908b,1084s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,131p,1896b,1084s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/mcucc/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/
 Inconsolata-zi4r.pfb><C:/Users/mcucc/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/newtx/LibertineMathMI.pfb><C:/Users/mcucc/AppData/Local/Programs/MiKTeX/
@@ -1305,9 +1340,9 @@ sers/mcucc/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinLibert
 ineTB.pfb><C:/Users/mcucc/AppData/Local/Programs/MiKTeX/fonts/type1/public/libe
 rtine/LinLibertineTI.pfb><C:/Users/mcucc/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/newtx/txsys.pfb>
-Output written on main.pdf (6 pages, 1439666 bytes).
+Output written on main.pdf (7 pages, 1242765 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
- 90 named destinations out of 1000 (max. 500000)
- 81109 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 287 PDF objects out of 1000 (max. 8388607)
+ 96 named destinations out of 1000 (max. 500000)
+ 81104 words of extra memory for PDF output out of 89155 (max. 10000000)
 
