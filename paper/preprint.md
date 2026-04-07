@@ -176,7 +176,8 @@ DPP8 had the strongest convergence signal in the entire GBM gene set and ranked 
 
 ### 4.5 The Smoking Gun: Justifications Reveal the Mechanism
 
-The most direct evidence of contamination comes from the model's own justifications (**Figure 2**). When blinded:
+The most direct evidence of contamination comes from the model's own justifications (**Figure 2**). 
+When blinded:
 
 > Gene\_088: "Very high mutation frequency (42.1%) with full constraint and strong structural enrichment (ESM2=22.3), pointing to a recurrent constrained driver."
 
