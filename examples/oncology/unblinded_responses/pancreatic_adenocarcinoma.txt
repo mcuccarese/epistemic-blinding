@@ -1,0 +1,20 @@
+1. KRAS - Highest mutation frequency (67.2%) and fully constrained (pLI=1.00), making it the dominant oncogenic driver in pancreatic adenocarcinoma.
+2. TP53 - Second-highest mutation frequency (61.5%), fully constrained, with 1,000 network neighbors indicating extensive pathway involvement.
+3. SMAD4 - Third-most mutated (21.3%), fully constrained, and central to the TGF-beta signaling axis frequently disrupted in PDAC.
+4. CDKN2A - Fourth-most mutated (20.1%) with notable structural enrichment (ESM2=52.3), indicating its protein neighborhood is strongly disease-associated.
+5. ARID1A - Highest mutation frequency (5.2%) among chromatin remodelers, fully constrained (pLI=1.00), pointing to an essential epigenetic regulator.
+6. RNF43 - Highest mid-tier mutation frequency (6.3%) with a very large neighbor network (888), suggesting broad Wnt-pathway convergence despite low pLI.
+7. TGFBR2 - Significantly mutated (4.6%) and highly constrained (pLI=0.91), reinforcing TGF-beta pathway disruption as a core PDAC mechanism alongside SMAD4.
+8. KMT2D - Mutated (4.0%), fully constrained, with very high protein-function enrichment (PTenr=78.5), implicating histone methylation as a convergent vulnerability.
+9. KMT2C - Same strong profile as KMT2D (mutated, pLI=1.00, PTenr=78.5) but with more experimental neighbors (145), reinforcing the MLL-family as a target class.
+10. GNAS - Mutated (4.0%), fully constrained, with structural enrichment (ESM2=5.0) and a large network (784 neighbors), supporting its role as a signaling hub.
+11. FLNC - Mutated (4.0%) and fully constrained, with the highest protein-function enrichment of any mutated gene (PTenr=125.6), indicating strong functional convergence.
+12. RREB1 - Mutated (4.0%), fully constrained, with the largest neighbor network among mutated genes (1,160), consistent with its role as a KRAS-responsive transcription factor in PDAC.
+13. NRAS - The only gene enriched across all three experimental modalities (ESM2=157.0, GFenr=28.5, PTenr=12.8) with high constraint (pLI=0.94), providing the strongest multi-modal convergence evidence.
+14. GLI3 - Mutated (4.0%) and fully constrained, implicating Hedgehog pathway dysregulation as a contributing mechanism in this cancer.
+15. FLT4 - Mutated (3.4%), fully constrained, with a very large neighbor network (1,112), marking this receptor tyrosine kinase as a broadly connected and essential target.
+16. FN1 - Mutated (3.4%), fully constrained, with strong protein-function enrichment (PTenr=52.3), suggesting disease-relevant extracellular matrix remodeling.
+17. ACVR2A - Fully constrained (pLI=1.00) with very high structural enrichment (ESM2=314.0) and protein-function enrichment (PTenr=19.0); a TGF-beta pathway receptor whose neighbors are heavily disease-associated even without reaching mutation significance.
+18. HDAC4 - Fully constrained with high protein-function enrichment (PTenr=78.5) and the most experimental neighbors of any gene (1,687), indicating massive functional convergence around this druggable histone deacetylase.
+19. ATM - Significantly mutated (4.6%) in a well-characterized DNA damage response gene, representing an actionable synthetic-lethality target despite low enrichment scores.
+20. NOS1 - Mutated (3.4%), fully constrained, with the largest neighbor network in the dataset (1,368), suggesting it sits at a highly connected functional node relevant to disease biology.

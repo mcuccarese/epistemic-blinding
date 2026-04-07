@@ -1,0 +1,141 @@
+You are a computational biologist analyzing gene-level features to identify
+the most promising drug targets for a specific cancer indication.
+
+You will be given a table of 100 genes with their features. Your task is to
+select and rank the TOP 20 genes that are most likely to be successful drug
+targets for this cancer type.
+
+Base your ranking ONLY on the features provided. Consider:
+1. Mutation frequency and significance (is the gene a driver?)
+2. Genetic constraint (pLI) — constrained genes are more likely to be essential
+3. Experimental convergence — genes whose neighbors in protein structure,
+   transcriptomics, and function are also disease-associated
+4. The combination of multiple signals is stronger than any single signal
+
+Return your answer as a numbered list of 20 genes, ranked from most to least
+promising. For each gene, give a 1-sentence justification.
+
+
+Feature descriptions (provided to the LLM for both conditions):
+- mut_freq: Fraction of tumor samples with somatic mutations in this gene (0-1). Higher = more frequently mutated.
+- is_mutated: Whether the gene passes the significance threshold for mutation frequency (YES/no).
+- pLI: Probability of loss-of-function intolerance (0-1). Higher = gene is more constrained/essential.
+- esm2_enrichment: Protein structure similarity enrichment. How much more often this gene's structural neighbors are disease-associated vs chance. >1 = enriched.
+- geneformer_enrichment: Single-cell transcriptomic co-expression enrichment. Same interpretation as above.
+- prottrans_enrichment: Protein function domain enrichment. Same interpretation.
+- n_neighbors: Total experimental biology neighbors across all modalities.
+
+
+INDICATION: Chromosomally unstable colorectal cancer
+Total significantly mutated genes in this cancer type: 300
+
+Below are 100 candidate genes with their features. Select and rank the top 20
+most promising drug targets.
+
+Gene         mut_freq mutated   pLI  ESM2enr    GFenr    PTenr  n_nbrs
+----------------------------------------------------------------------
+Gene_001        0.043     YES  1.00      0.0      0.0     44.7       3
+Gene_002        0.052     YES  1.00      2.0      0.0      6.8    1392
+Gene_003        0.055     YES  0.13      0.0      0.9     12.3    1382
+Gene_004        0.040     YES  1.00     10.7      0.0      8.1      33
+Gene_005        0.055     YES  1.00      1.8      0.0      8.4    1603
+Gene_006        0.088     YES  1.00      1.6      0.0      1.8     913
+Gene_007        0.091     YES  1.00      1.7      0.0      4.1    1223
+Gene_008        0.064     YES  1.00      1.9      0.5      0.0    1138
+Gene_009        0.061     YES  1.00      6.3      0.0     21.2    1012
+Gene_010        0.851     YES  1.00      0.0      0.0     10.6     549
+Gene_011        0.070     YES  0.94     16.7      3.0      1.4     122
+Gene_012        0.030     YES  0.00      5.8     67.0     13.4      38
+Gene_013        0.040     YES  1.00      1.8      0.0     11.2    1104
+Gene_014        0.040     YES  1.00     13.2      0.0     12.3     211
+Gene_015        0.034     YES  1.00      2.2      0.0     12.2     388
+Gene_016        0.040     YES  1.00     15.4     67.0     14.5      73
+Gene_017        0.064     YES  0.00      0.0      0.0     10.7      25
+Gene_018        0.043     YES  0.99      0.0      0.0     19.1      19
+Gene_019        0.058     YES  1.00     22.3      0.0     19.1      48
+Gene_020        0.034     YES  0.91      2.4     67.0     12.2    1252
+Gene_021        0.046     YES  0.00     22.3      0.0     14.3     105
+Gene_022        0.043     YES  1.00      0.0      0.0     11.2      13
+Gene_023        0.049     YES  0.66     14.1      0.0     12.2      88
+Gene_024        0.034     YES  1.00      3.3     67.0      6.1     447
+Gene_025        0.046     YES  1.00      0.0      0.0     33.5     180
+Gene_026        0.064     YES  0.00     13.2      0.0     14.5      82
+Gene_027        0.055     YES  1.00      0.0      0.0     20.1     482
+Gene_028        0.034     YES  1.00      0.0      0.0     20.3      44
+Gene_029        0.037     YES  1.00     33.5      0.0     22.3      25
+Gene_030        0.046     YES  1.00      0.0      0.0     12.0      41
+Gene_031        0.037     YES  1.00     38.3      0.0     24.1      29
+Gene_032        0.055     YES  0.98      0.0      0.0     22.3       8
+Gene_033        0.030     YES  1.00      5.4      0.0     10.5     122
+Gene_034        0.091     YES  0.00      0.0      0.0     16.7      44
+Gene_035        0.030     YES  1.00      0.0      0.0     26.8      68
+Gene_036        0.216     YES  1.00      2.5      0.0      2.5     666
+Gene_037        0.055     YES  1.00      0.0      0.0      8.4     145
+Gene_038        0.073     YES  1.00      1.7      0.0      0.0    1738
+Gene_039        0.070     YES  1.00      0.0      0.0     10.0     508
+Gene_040        0.052     YES  1.00     67.0      0.0     17.2     197
+Gene_041        0.052     YES  0.00      3.7      0.0     16.7    1543
+Gene_042        0.070     YES  0.00      0.0     22.3      9.6      17
+Gene_043        0.073     YES  1.00      3.2      0.0     23.6     755
+Gene_044        0.030     YES  0.00      0.0     12.4     12.1     324
+Gene_045        0.082     YES  0.00      0.0     67.0      5.9     410
+Gene_046        0.030     YES  1.00     25.8      0.0     19.4     140
+Gene_047        0.067     YES  0.00      0.0      1.0      6.1     470
+Gene_048        0.043     YES  1.00     11.6      0.0     15.9     135
+Gene_049        0.049     YES  1.00      1.9      0.0      7.4     917
+Gene_050        0.131     YES  1.00      3.5      0.0      0.0     353
+Gene_051        0.046     YES  1.00     14.4      0.0     10.6      69
+Gene_052        0.799     YES  1.00      1.5      0.0      0.0    1000
+Gene_053        0.034     YES  0.00      7.2      9.6     12.1     102
+Gene_054        0.043     YES  1.00      6.1      0.0     15.5     616
+Gene_055        0.043     YES  1.00     38.3      0.0     17.9      30
+Gene_056        0.030     YES  1.00      3.2      0.0     15.9     216
+Gene_057        0.122     YES  1.00      1.5      4.2      2.9     733
+Gene_058        0.040     YES  1.00      2.5      0.0     12.5     668
+Gene_059        0.037     YES  1.00     16.3      0.0     11.2      61
+Gene_060        0.040     YES  1.00      2.0      0.0      7.7    1250
+Gene_061        0.058     YES  0.00      7.7      0.0      5.6     669
+Gene_062        0.040     YES  1.00      1.9      0.0      6.8     903
+Gene_063        0.049     YES  1.00      3.8      0.0      6.7     232
+Gene_064        0.061     YES  1.00      0.0      0.0     44.7       5
+Gene_065        0.040     YES  1.00      9.9      0.0      7.7     591
+Gene_066        0.040     YES  0.00      0.0     10.0     12.1     223
+Gene_067        0.037     YES  1.00     12.8      0.0      8.4     243
+Gene_068        0.034     YES  1.00     33.5      0.0     10.7      49
+Gene_069        0.046     YES  0.00      9.1      0.0     10.6     369
+Gene_070        0.034     YES  1.00      5.0      0.0      7.4      53
+Gene_071        0.061     YES  0.00      0.0      0.0     11.8      20
+Gene_072        0.052     YES  0.00      9.3      0.0     13.9     453
+Gene_073        0.055     YES  1.00      2.0      0.0      5.0    1020
+Gene_074        0.052     YES  1.00      0.0      0.0     16.1      25
+Gene_075        0.043     YES  0.00      0.0      3.2     12.1     205
+Gene_076        0.046     YES  0.00      0.0     16.7     13.8      38
+Gene_077        0.030     YES  0.00      3.4     16.7      8.4     195
+Gene_078        0.034     YES  1.00     10.8      0.0     22.8     110
+Gene_079        0.043     YES  0.00      2.5     22.3      2.7     103
+Gene_080        0.030     YES  1.00      5.3      0.0     17.5     286
+Gene_081        0.030     YES  1.00     22.3      0.0     15.8      19
+Gene_082        0.037     YES  1.00      0.0      0.0     19.4      45
+Gene_083        0.040     YES  1.00     18.3      0.0      7.2     122
+Gene_084        0.061     YES  1.00      0.0      0.0     22.3      96
+Gene_085        0.064     YES  0.00     18.0     22.3     18.8     171
+Gene_086        0.070     YES  0.00      0.0      0.0     26.8      14
+Gene_087        0.104     YES  0.00      1.7      3.6      3.2    1504
+Gene_088        0.421     YES  1.00     22.3      0.0      1.4      56
+Gene_089        0.058     YES  1.00      4.3      0.0     12.9     526
+Gene_090        0.034     YES  0.00      3.4      0.0     23.9     528
+Gene_091        0.030     YES  0.00     12.0      0.0     12.8     130
+Gene_092        0.046     YES  0.00      3.6      0.0     13.7     729
+Gene_093        0.034     YES  0.00      9.6      0.0     13.4      89
+Gene_094        0.043     YES  1.00      5.0      0.0      4.2     131
+Gene_095        0.085     YES  0.00      0.0     67.0      7.2      38
+Gene_096        0.037     YES  1.00      4.0      0.0     13.1     502
+Gene_097        0.046     YES  0.00      1.9     67.0      2.9    1058
+Gene_098        0.037     YES  0.99     33.5      0.0     16.2      35
+Gene_099        0.034     YES  0.00      6.7      0.0     15.2     130
+Gene_100        0.034     YES  1.00      2.4      0.0     25.3    1359
+
+Please return your top 20 as a numbered list:
+1. Gene_NNN - justification
+2. Gene_NNN - justification
+...

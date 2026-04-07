@@ -1,0 +1,20 @@
+1. Gene_088 - Highest mutation frequency (67.2%) and fully constrained (pLI=1.0), marking it as the dominant somatic driver in this indication.
+2. Gene_085 - Second highest mutation frequency (61.5%), fully constrained, with a large interaction network (1000 neighbors), indicating a central essential driver.
+3. Gene_052 - Highly mutated (21.3%), fully constrained, with structural enrichment (ESM2=3.7) and a large network (733 neighbors), combining driver status with experimental convergence.
+4. Gene_010 - Highly mutated (20.1%) with strong structural neighbor enrichment (ESM2=52.3) and moderate constraint (pLI=0.62), suggesting a driver whose protein structure neighborhood is disease-relevant.
+5. Gene_016 - Mutated, fully constrained, with the highest protein-domain enrichment among mutated genes (PTenr=125.6), indicating its functional domain family is deeply linked to disease.
+6. Gene_057 - Mutated, fully constrained, high protein-domain enrichment (78.5), and 145 neighbors, providing convergent functional and genetic evidence for essentiality.
+7. Gene_036 - Mutated, fully constrained, with high protein-domain enrichment (78.5), combining driver mutation status with strong functional-class signal.
+8. Gene_050 - Mutated, fully constrained, with structural enrichment (ESM2=5.0) and a very large network (784 neighbors), suggesting a well-connected essential hub.
+9. Gene_040 - Mutated, fully constrained, with 1160 neighbors making it one of the largest network hubs, indicating broad pathway influence.
+10. Gene_053 - Higher mutation frequency (5.2%) among moderately mutated genes and fully constrained, supporting its role as a driver under strong purifying selection.
+11. Gene_055 - Mutated, fully constrained, with notable protein-domain enrichment (52.3), linking it to a disease-associated functional class.
+12. Gene_029 - The only gene with enrichment across all three experimental modalities (ESM2=157.0, GFenr=28.5, PTenr=12.8) and near-constrained (pLI=0.94); exceptional convergence makes it a compelling non-mutational pathway target.
+13. Gene_046 - Mutated, fully constrained, with 1112 neighbors representing a massive interaction hub likely to influence multiple disease-relevant pathways.
+14. Gene_095 - Mutated, fully constrained, with the largest network among mutated genes (1368 neighbors), suggesting a master regulatory node.
+15. Gene_043 - Mutated with dual-modality enrichment (ESM2=24.2, PTenr=13.1) and 669 neighbors, providing convergent structural and functional evidence despite low pLI.
+16. Gene_087 - Mutated at above-average frequency (4.6%) with near-full constraint (pLI=0.91), combining driver evidence with essentiality.
+17. Gene_011 - Mutated, fully constrained, with 526 neighbors and modest structural enrichment, indicating a well-connected essential gene under somatic selection.
+18. Gene_009 - Mutated with dual-modality enrichment (ESM2=9.4, PTenr=15.7) and 272 neighbors; the two independent experimental signals compensate for low pLI.
+19. Gene_019 - Mutated, fully constrained, with protein-domain enrichment (19.0), linking driver status to a disease-associated functional family.
+20. Gene_026 - Fifth highest mutation frequency (6.3%) with the second-largest network in the dataset (888 neighbors); despite low pLI, the combination of frequent mutation and massive connectivity suggests pathway-level importance.

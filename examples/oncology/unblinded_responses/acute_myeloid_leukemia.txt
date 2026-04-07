@@ -1,0 +1,20 @@
+1. FLT3 - Highest mutation frequency (0.286), fully constrained (pLI=1.00), with protein function enrichment (PT=20.9) and a large interaction network (n=819), making it the strongest multi-signal candidate.
+2. NPM1 - Second-highest mutation frequency (0.271), fully constrained (pLI=1.00), with structural enrichment (ESM2=2.6) and a substantial network (n=551).
+3. IDH2 - High mutation frequency (0.106) with near-complete constraint (pLI=0.98) and dual convergence from structural (ESM2=2.8) and protein function (PT=13.7) enrichment.
+4. NRAS - Frequently mutated (0.080), highly constrained (pLI=0.94), with very strong structural enrichment (ESM2=167.5) and protein function enrichment (PT=13.7) indicating broad disease-network connectivity.
+5. KRAS - Significantly mutated (0.050), fully constrained (pLI=1.00), with extreme structural enrichment (ESM2=223.3) and protein function enrichment (PT=13.7), indicating its structural neighbors are heavily disease-associated.
+6. IDH1 - High mutation frequency (0.095) with dual convergence signals (ESM2=7.7, PT=16.7), complementing IDH2 as a metabolic driver target.
+7. TP53 - Frequently mutated (0.075), fully constrained (pLI=1.00), with a very large network (n=1000), indicating centrality in disease-relevant pathways.
+8. PTPN11 - Significantly mutated (0.050), fully constrained (pLI=1.00), with structural enrichment (ESM2=3.9) and a substantial network (n=314).
+9. KIT - Significantly mutated (0.040), fully constrained (pLI=1.00), with protein function enrichment (PT=17.2) and a large network (n=946), combining druggability signals with driver evidence.
+10. DNMT3A - Very high mutation frequency (0.251) marks it as a clear driver gene despite lacking constraint or enrichment signals.
+11. RUNX1 - High mutation frequency (0.095) with a large interaction network (n=577), indicating broad pathway involvement.
+12. TET2 - High mutation frequency (0.085) establishes it as a recurrent AML driver, though it lacks constraint and convergence signals.
+13. WT1 - Significantly mutated (0.065), fully constrained (pLI=1.00), with a very large network (n=1164), suggesting essentiality and broad functional connectivity.
+14. CEBPA - Significantly mutated (0.065) as a recurrent AML driver with moderate constraint (pLI=0.26).
+15. DNMT1 - Not mutated but the strongest convergence candidate: fully constrained (pLI=1.00) with exceptional transcriptomic (GF=223.3), protein function (PT=60.9), and structural (ESM2=2.6) enrichment across the largest network (n=1691).
+16. SF3B1 - Significantly mutated (0.030), fully constrained (pLI=1.00), with structural enrichment (ESM2=5.7) and a moderate network (n=156), implicating the spliceosome.
+17. SMC3 - Significantly mutated (0.035) and fully constrained (pLI=1.00), supporting a role as an essential cohesin-complex driver.
+18. RAD21 - Significantly mutated (0.030) and fully constrained (pLI=1.00), providing a second cohesin-complex target with strong genetic evidence.
+19. NF1 - Significantly mutated (0.030), fully constrained (pLI=1.00), with a substantial network (n=358), combining tumor suppressor driver evidence with essentiality.
+20. SENP6 - Significantly mutated (0.035) and fully constrained (pLI=1.00), with a moderate network (n=183), suggesting an essential SUMOylation pathway target.

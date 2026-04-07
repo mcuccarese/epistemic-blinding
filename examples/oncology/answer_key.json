@@ -1,0 +1,897 @@
+{
+  "Acute myeloid leukemia": {
+    "anon_map": {
+      "Gene_001": "DCAF17",
+      "Gene_002": "TTLL4",
+      "Gene_003": "CDYL",
+      "Gene_004": "MED12",
+      "Gene_005": "TCF3",
+      "Gene_006": "GABRG3",
+      "Gene_007": "HRAS",
+      "Gene_008": "ADGRF5",
+      "Gene_009": "WT1",
+      "Gene_010": "NRAS",
+      "Gene_011": "RAP1B",
+      "Gene_012": "USP37",
+      "Gene_013": "ACO1",
+      "Gene_014": "HPS3",
+      "Gene_015": "ARFGEF2",
+      "Gene_016": "NPM1",
+      "Gene_017": "AQR",
+      "Gene_018": "PDGFRA",
+      "Gene_019": "DNMT1",
+      "Gene_020": "GDI1",
+      "Gene_021": "ABCG5",
+      "Gene_022": "TAX1BP1",
+      "Gene_023": "RAD21",
+      "Gene_024": "COG5",
+      "Gene_025": "SUPT16H",
+      "Gene_026": "CEBPA",
+      "Gene_027": "PHF6",
+      "Gene_028": "ZNF621",
+      "Gene_029": "RUNX1",
+      "Gene_030": "YME1L1",
+      "Gene_031": "PTPN11",
+      "Gene_032": "GUCY2C",
+      "Gene_033": "EEF1D",
+      "Gene_034": "BRWD1",
+      "Gene_035": "IPO9",
+      "Gene_036": "IDH1",
+      "Gene_037": "NAP1L4",
+      "Gene_038": "MAT1A",
+      "Gene_039": "GDI2",
+      "Gene_040": "U2AF1L4",
+      "Gene_041": "DDX46",
+      "Gene_042": "U2AF1",
+      "Gene_043": "KIT",
+      "Gene_044": "FBXO5",
+      "Gene_045": "SLIT2",
+      "Gene_046": "SMC3",
+      "Gene_047": "AHCYL1",
+      "Gene_048": "SETD5",
+      "Gene_049": "DROSHA",
+      "Gene_050": "TET2",
+      "Gene_051": "SMC1B",
+      "Gene_052": "IDH2",
+      "Gene_053": "SENP2",
+      "Gene_054": "NIPBL",
+      "Gene_055": "TP53",
+      "Gene_056": "EGR2",
+      "Gene_057": "DNMT3A",
+      "Gene_058": "CCDC47",
+      "Gene_059": "RALA",
+      "Gene_060": "ABCA9",
+      "Gene_061": "ASS1",
+      "Gene_062": "BZW1",
+      "Gene_063": "PRDM11",
+      "Gene_064": "SETX",
+      "Gene_065": "PDS5A",
+      "Gene_066": "OXCT1",
+      "Gene_067": "XPO1",
+      "Gene_068": "PPA2",
+      "Gene_069": "MAT2A",
+      "Gene_070": "SMAD4",
+      "Gene_071": "PTPRO",
+      "Gene_072": "RAP2B",
+      "Gene_073": "TFAP2C",
+      "Gene_074": "SMC6",
+      "Gene_075": "KLF5",
+      "Gene_076": "NOL4",
+      "Gene_077": "IRF4",
+      "Gene_078": "ASXL1",
+      "Gene_079": "KLF4",
+      "Gene_080": "FAM111A",
+      "Gene_081": "LIFR",
+      "Gene_082": "CFTR",
+      "Gene_083": "PTPRE",
+      "Gene_084": "NF1",
+      "Gene_085": "FLT3",
+      "Gene_086": "TALDO1",
+      "Gene_087": "ABCA6",
+      "Gene_088": "KRAS",
+      "Gene_089": "STAG2",
+      "Gene_090": "PTPRC",
+      "Gene_091": "ARFGEF1",
+      "Gene_092": "STAG3",
+      "Gene_093": "IRF8",
+      "Gene_094": "BAZ1B",
+      "Gene_095": "SENP6",
+      "Gene_096": "SETDB2",
+      "Gene_097": "AHCY",
+      "Gene_098": "SF3B1",
+      "Gene_099": "RET",
+      "Gene_100": "DNAJC10"
+    },
+    "approved_targets_in_set": [
+      {
+        "symbol": "NPM1",
+        "anon_id": "Gene_016",
+        "model_rank": 5
+      },
+      {
+        "symbol": "IDH1",
+        "anon_id": "Gene_036",
+        "model_rank": 6
+      },
+      {
+        "symbol": "KIT",
+        "anon_id": "Gene_043",
+        "model_rank": 8
+      },
+      {
+        "symbol": "IDH2",
+        "anon_id": "Gene_052",
+        "model_rank": 4
+      },
+      {
+        "symbol": "DNMT3A",
+        "anon_id": "Gene_057",
+        "model_rank": 7
+      },
+      {
+        "symbol": "FLT3",
+        "anon_id": "Gene_085",
+        "model_rank": 2
+      }
+    ],
+    "model_top20": [
+      {
+        "symbol": "NRAS",
+        "anon_id": "Gene_010",
+        "model_rank": 1
+      },
+      {
+        "symbol": "FLT3",
+        "anon_id": "Gene_085",
+        "model_rank": 2
+      },
+      {
+        "symbol": "KRAS",
+        "anon_id": "Gene_088",
+        "model_rank": 3
+      },
+      {
+        "symbol": "IDH2",
+        "anon_id": "Gene_052",
+        "model_rank": 4
+      },
+      {
+        "symbol": "NPM1",
+        "anon_id": "Gene_016",
+        "model_rank": 5
+      },
+      {
+        "symbol": "IDH1",
+        "anon_id": "Gene_036",
+        "model_rank": 6
+      },
+      {
+        "symbol": "DNMT3A",
+        "anon_id": "Gene_057",
+        "model_rank": 7
+      },
+      {
+        "symbol": "KIT",
+        "anon_id": "Gene_043",
+        "model_rank": 8
+      },
+      {
+        "symbol": "TP53",
+        "anon_id": "Gene_055",
+        "model_rank": 9
+      },
+      {
+        "symbol": "RUNX1",
+        "anon_id": "Gene_029",
+        "model_rank": 10
+      },
+      {
+        "symbol": "WT1",
+        "anon_id": "Gene_009",
+        "model_rank": 11
+      },
+      {
+        "symbol": "PTPN11",
+        "anon_id": "Gene_031",
+        "model_rank": 12
+      },
+      {
+        "symbol": "DNMT1",
+        "anon_id": "Gene_019",
+        "model_rank": 13
+      },
+      {
+        "symbol": "TET2",
+        "anon_id": "Gene_050",
+        "model_rank": 14
+      },
+      {
+        "symbol": "SF3B1",
+        "anon_id": "Gene_098",
+        "model_rank": 15
+      },
+      {
+        "symbol": "CEBPA",
+        "anon_id": "Gene_026",
+        "model_rank": 16
+      },
+      {
+        "symbol": "U2AF1L4",
+        "anon_id": "Gene_040",
+        "model_rank": 17
+      },
+      {
+        "symbol": "SENP2",
+        "anon_id": "Gene_053",
+        "model_rank": 18
+      },
+      {
+        "symbol": "RAP1B",
+        "anon_id": "Gene_011",
+        "model_rank": 19
+      },
+      {
+        "symbol": "SMC3",
+        "anon_id": "Gene_046",
+        "model_rank": 20
+      }
+    ],
+    "n_candidates": 100,
+    "n_sig_genes": 30
+  },
+  "IDH-wildtype glioblastoma": {
+    "anon_map": {
+      "Gene_001": "SLCO6A1",
+      "Gene_002": "PCDHGB2",
+      "Gene_003": "STAG2",
+      "Gene_004": "GABRB2",
+      "Gene_005": "COL1A2",
+      "Gene_006": "BCL11A",
+      "Gene_007": "DSG3",
+      "Gene_008": "PRKG2",
+      "Gene_009": "TRPV5",
+      "Gene_010": "TP53",
+      "Gene_011": "SCN9A",
+      "Gene_012": "SETD2",
+      "Gene_013": "F5",
+      "Gene_014": "LAMA1",
+      "Gene_015": "HRNR",
+      "Gene_016": "TRPV6",
+      "Gene_017": "ZFP42",
+      "Gene_018": "COL1A1",
+      "Gene_019": "ARHGEF5",
+      "Gene_020": "ENPEP",
+      "Gene_021": "SEMA3C",
+      "Gene_022": "EPPK1",
+      "Gene_023": "TLL1",
+      "Gene_024": "PDGFRA",
+      "Gene_025": "STXBP5L",
+      "Gene_026": "TENM4",
+      "Gene_027": "ITSN1",
+      "Gene_028": "PALM2AKAP2",
+      "Gene_029": "SLIT3",
+      "Gene_030": "TCHH",
+      "Gene_031": "CACNA2D1",
+      "Gene_032": "CDH9",
+      "Gene_033": "PRDM9",
+      "Gene_034": "DOCK5",
+      "Gene_035": "THSD7B",
+      "Gene_036": "CACNA1S",
+      "Gene_037": "CHD8",
+      "Gene_038": "CDK13",
+      "Gene_039": "TRPM2",
+      "Gene_040": "RB1",
+      "Gene_041": "SVEP1",
+      "Gene_042": "VWF",
+      "Gene_043": "PIK3CG",
+      "Gene_044": "TMPRSS6",
+      "Gene_045": "ATP2B3",
+      "Gene_046": "PCDH19",
+      "Gene_047": "IL4R",
+      "Gene_048": "ZFHX3",
+      "Gene_049": "ENPP2",
+      "Gene_050": "PCDH11X",
+      "Gene_051": "GRM3",
+      "Gene_052": "NF1",
+      "Gene_053": "PIK3CB",
+      "Gene_054": "TRHDE",
+      "Gene_055": "DPP10",
+      "Gene_056": "TGM3",
+      "Gene_057": "PTEN",
+      "Gene_058": "SETBP1",
+      "Gene_059": "ATP8B4",
+      "Gene_060": "PROKR2",
+      "Gene_061": "CALN1",
+      "Gene_062": "OR52B2",
+      "Gene_063": "NELL1",
+      "Gene_064": "NRK",
+      "Gene_065": "RIMS2",
+      "Gene_066": "HCN1",
+      "Gene_067": "GABRA1",
+      "Gene_068": "GRIN2A",
+      "Gene_069": "SDK1",
+      "Gene_070": "COL28A1",
+      "Gene_071": "UBE3C",
+      "Gene_072": "PIK3R1",
+      "Gene_073": "GRM8",
+      "Gene_074": "PSD4",
+      "Gene_075": "MYH1",
+      "Gene_076": "KIAA1210",
+      "Gene_077": "L1CAM",
+      "Gene_078": "ANO2",
+      "Gene_079": "CARD6",
+      "Gene_080": "ADCY1",
+      "Gene_081": "CARD11",
+      "Gene_082": "FAM47A",
+      "Gene_083": "NCOR1",
+      "Gene_084": "ZNF407",
+      "Gene_085": "PIK3CA",
+      "Gene_086": "PLEKHG4B",
+      "Gene_087": "DPP8",
+      "Gene_088": "EGFR",
+      "Gene_089": "RBPJL",
+      "Gene_090": "ACTL9",
+      "Gene_091": "CPNE8",
+      "Gene_092": "COL6A2",
+      "Gene_093": "COL3A1",
+      "Gene_094": "PPP1R3A",
+      "Gene_095": "PCDHGB3",
+      "Gene_096": "ANK1",
+      "Gene_097": "LTBP2",
+      "Gene_098": "TENM3",
+      "Gene_099": "ABCB1",
+      "Gene_100": "FBN3"
+    },
+    "approved_targets_in_set": [
+      {
+        "symbol": "NF1",
+        "anon_id": "Gene_052",
+        "model_rank": 4
+      },
+      {
+        "symbol": "PTEN",
+        "anon_id": "Gene_057",
+        "model_rank": 7
+      },
+      {
+        "symbol": "EGFR",
+        "anon_id": "Gene_088",
+        "model_rank": 3
+      }
+    ],
+    "model_top20": [
+      {
+        "symbol": "TP53",
+        "anon_id": "Gene_010",
+        "model_rank": 1
+      },
+      {
+        "symbol": "PIK3CA",
+        "anon_id": "Gene_085",
+        "model_rank": 2
+      },
+      {
+        "symbol": "EGFR",
+        "anon_id": "Gene_088",
+        "model_rank": 3
+      },
+      {
+        "symbol": "NF1",
+        "anon_id": "Gene_052",
+        "model_rank": 4
+      },
+      {
+        "symbol": "TRPV6",
+        "anon_id": "Gene_016",
+        "model_rank": 5
+      },
+      {
+        "symbol": "CACNA1S",
+        "anon_id": "Gene_036",
+        "model_rank": 6
+      },
+      {
+        "symbol": "PTEN",
+        "anon_id": "Gene_057",
+        "model_rank": 7
+      },
+      {
+        "symbol": "PIK3CG",
+        "anon_id": "Gene_043",
+        "model_rank": 8
+      },
+      {
+        "symbol": "DPP10",
+        "anon_id": "Gene_055",
+        "model_rank": 9
+      },
+      {
+        "symbol": "SLIT3",
+        "anon_id": "Gene_029",
+        "model_rank": 10
+      },
+      {
+        "symbol": "TRPV5",
+        "anon_id": "Gene_009",
+        "model_rank": 11
+      },
+      {
+        "symbol": "CACNA2D1",
+        "anon_id": "Gene_031",
+        "model_rank": 12
+      },
+      {
+        "symbol": "ARHGEF5",
+        "anon_id": "Gene_019",
+        "model_rank": 13
+      },
+      {
+        "symbol": "PCDH11X",
+        "anon_id": "Gene_050",
+        "model_rank": 14
+      },
+      {
+        "symbol": "TENM3",
+        "anon_id": "Gene_098",
+        "model_rank": 15
+      },
+      {
+        "symbol": "TENM4",
+        "anon_id": "Gene_026",
+        "model_rank": 16
+      },
+      {
+        "symbol": "RB1",
+        "anon_id": "Gene_040",
+        "model_rank": 17
+      },
+      {
+        "symbol": "PIK3CB",
+        "anon_id": "Gene_053",
+        "model_rank": 18
+      },
+      {
+        "symbol": "SCN9A",
+        "anon_id": "Gene_011",
+        "model_rank": 19
+      },
+      {
+        "symbol": "PCDH19",
+        "anon_id": "Gene_046",
+        "model_rank": 20
+      }
+    ],
+    "n_candidates": 100,
+    "n_sig_genes": 110
+  },
+  "Pancreatic adenocarcinoma": {
+    "anon_map": {
+      "Gene_001": "COL4A1",
+      "Gene_002": "COL5A2",
+      "Gene_003": "COL11A2",
+      "Gene_004": "ADAMTS9",
+      "Gene_005": "ACVR2A",
+      "Gene_006": "KCNA6",
+      "Gene_007": "PEG3",
+      "Gene_008": "ADAMTS1",
+      "Gene_009": "ADAMTS12",
+      "Gene_010": "CDKN2A",
+      "Gene_011": "PCDH9",
+      "Gene_012": "ATM",
+      "Gene_013": "COL4A6",
+      "Gene_014": "COL3A1",
+      "Gene_015": "COL21A1",
+      "Gene_016": "FLNC",
+      "Gene_017": "COL9A2",
+      "Gene_018": "COL5A3",
+      "Gene_019": "COL5A1",
+      "Gene_020": "LPO",
+      "Gene_021": "ADAMTS15",
+      "Gene_022": "KCNV2",
+      "Gene_023": "APBA2",
+      "Gene_024": "ADAM2",
+      "Gene_025": "HRAS",
+      "Gene_026": "RNF43",
+      "Gene_027": "TPO",
+      "Gene_028": "PIANP",
+      "Gene_029": "NRAS",
+      "Gene_030": "COL4A3",
+      "Gene_031": "FLNA",
+      "Gene_032": "ADAMTS5",
+      "Gene_033": "COL16A1",
+      "Gene_034": "COL28A1",
+      "Gene_035": "HDAC4",
+      "Gene_036": "KMT2D",
+      "Gene_037": "COL4A4",
+      "Gene_038": "GPRASP1",
+      "Gene_039": "KDM6A",
+      "Gene_040": "RREB1",
+      "Gene_041": "PKNOX2",
+      "Gene_042": "MAP3K21",
+      "Gene_043": "ADAMTS16",
+      "Gene_044": "CDH7",
+      "Gene_045": "ABTB3",
+      "Gene_046": "FLT4",
+      "Gene_047": "KCNC1",
+      "Gene_048": "KDM1B",
+      "Gene_049": "RAP1B",
+      "Gene_050": "GNAS",
+      "Gene_051": "DSCAML1",
+      "Gene_052": "SMAD4",
+      "Gene_053": "ARID1A",
+      "Gene_054": "COL6A1",
+      "Gene_055": "FN1",
+      "Gene_056": "COL4A5",
+      "Gene_057": "KMT2C",
+      "Gene_058": "COL24A1",
+      "Gene_059": "ADAM19",
+      "Gene_060": "COL8A2",
+      "Gene_061": "C1QC",
+      "Gene_062": "SYNM",
+      "Gene_063": "KCNS3",
+      "Gene_064": "CCN1",
+      "Gene_065": "LDB2",
+      "Gene_066": "THSD7B",
+      "Gene_067": "MAGED1",
+      "Gene_068": "THSD4",
+      "Gene_069": "RAB7A",
+      "Gene_070": "KCNS1",
+      "Gene_071": "COL8A1",
+      "Gene_072": "COL23A1",
+      "Gene_073": "CCN4",
+      "Gene_074": "ADAMTS18",
+      "Gene_075": "CDH11",
+      "Gene_076": "KCNA7",
+      "Gene_077": "NTN4",
+      "Gene_078": "COL1A2",
+      "Gene_079": "PAPLN",
+      "Gene_080": "COL27A1",
+      "Gene_081": "KCNG3",
+      "Gene_082": "COL9A1",
+      "Gene_083": "ADAMTSL2",
+      "Gene_084": "PCDHB7",
+      "Gene_085": "TP53",
+      "Gene_086": "KCNV1",
+      "Gene_087": "TGFBR2",
+      "Gene_088": "KRAS",
+      "Gene_089": "GLI3",
+      "Gene_090": "COL22A1",
+      "Gene_091": "COLEC12",
+      "Gene_092": "COL9A3",
+      "Gene_093": "PCDHB15",
+      "Gene_094": "ADAM28",
+      "Gene_095": "NOS1",
+      "Gene_096": "COL11A1",
+      "Gene_097": "COL4A2",
+      "Gene_098": "COL6A2",
+      "Gene_099": "ZFP57",
+      "Gene_100": "ADAM12"
+    },
+    "approved_targets_in_set": [
+      {
+        "symbol": "KRAS",
+        "anon_id": "Gene_088",
+        "model_rank": 3
+      }
+    ],
+    "model_top20": [
+      {
+        "symbol": "CDKN2A",
+        "anon_id": "Gene_010",
+        "model_rank": 1
+      },
+      {
+        "symbol": "TP53",
+        "anon_id": "Gene_085",
+        "model_rank": 2
+      },
+      {
+        "symbol": "KRAS",
+        "anon_id": "Gene_088",
+        "model_rank": 3
+      },
+      {
+        "symbol": "SMAD4",
+        "anon_id": "Gene_052",
+        "model_rank": 4
+      },
+      {
+        "symbol": "FLNC",
+        "anon_id": "Gene_016",
+        "model_rank": 5
+      },
+      {
+        "symbol": "KMT2D",
+        "anon_id": "Gene_036",
+        "model_rank": 6
+      },
+      {
+        "symbol": "KMT2C",
+        "anon_id": "Gene_057",
+        "model_rank": 7
+      },
+      {
+        "symbol": "ADAMTS16",
+        "anon_id": "Gene_043",
+        "model_rank": 8
+      },
+      {
+        "symbol": "FN1",
+        "anon_id": "Gene_055",
+        "model_rank": 9
+      },
+      {
+        "symbol": "NRAS",
+        "anon_id": "Gene_029",
+        "model_rank": 10
+      },
+      {
+        "symbol": "ADAMTS12",
+        "anon_id": "Gene_009",
+        "model_rank": 11
+      },
+      {
+        "symbol": "FLNA",
+        "anon_id": "Gene_031",
+        "model_rank": 12
+      },
+      {
+        "symbol": "COL5A1",
+        "anon_id": "Gene_019",
+        "model_rank": 13
+      },
+      {
+        "symbol": "GNAS",
+        "anon_id": "Gene_050",
+        "model_rank": 14
+      },
+      {
+        "symbol": "COL6A2",
+        "anon_id": "Gene_098",
+        "model_rank": 15
+      },
+      {
+        "symbol": "RNF43",
+        "anon_id": "Gene_026",
+        "model_rank": 16
+      },
+      {
+        "symbol": "RREB1",
+        "anon_id": "Gene_040",
+        "model_rank": 17
+      },
+      {
+        "symbol": "ARID1A",
+        "anon_id": "Gene_053",
+        "model_rank": 18
+      },
+      {
+        "symbol": "PCDH9",
+        "anon_id": "Gene_011",
+        "model_rank": 19
+      },
+      {
+        "symbol": "FLT4",
+        "anon_id": "Gene_046",
+        "model_rank": 20
+      }
+    ],
+    "n_candidates": 100,
+    "n_sig_genes": 32
+  },
+  "Chromosomally unstable colorectal cancer": {
+    "anon_map": {
+      "Gene_001": "TENM2",
+      "Gene_002": "TRPS1",
+      "Gene_003": "PCDHB8",
+      "Gene_004": "COL5A1",
+      "Gene_005": "TSHZ3",
+      "Gene_006": "SOX9",
+      "Gene_007": "TCF7L2",
+      "Gene_008": "TAF1L",
+      "Gene_009": "PTPRT",
+      "Gene_010": "APC",
+      "Gene_011": "NRAS",
+      "Gene_012": "RIMBP2",
+      "Gene_013": "DOCK2",
+      "Gene_014": "NCAM2",
+      "Gene_015": "ASTN1",
+      "Gene_016": "SCN1A",
+      "Gene_017": "FREM2",
+      "Gene_018": "ASTN2",
+      "Gene_019": "NRXN1",
+      "Gene_020": "KCNH7",
+      "Gene_021": "CNTN5",
+      "Gene_022": "FN1",
+      "Gene_023": "CDH9",
+      "Gene_024": "MMP16",
+      "Gene_025": "TENM3",
+      "Gene_026": "SCN9A",
+      "Gene_027": "COL12A1",
+      "Gene_028": "DSCAML1",
+      "Gene_029": "GRIA1",
+      "Gene_030": "KCNB2",
+      "Gene_031": "GRIA2",
+      "Gene_032": "TMEM132D",
+      "Gene_033": "TLL1",
+      "Gene_034": "SDK1",
+      "Gene_035": "ADGRL3",
+      "Gene_036": "PIK3CA",
+      "Gene_037": "KMT2C",
+      "Gene_038": "HECW1",
+      "Gene_039": "NBEA",
+      "Gene_040": "ADGRB3",
+      "Gene_041": "PCDH18",
+      "Gene_042": "DYNC2H1",
+      "Gene_043": "PCDH17",
+      "Gene_044": "PCDHGA2",
+      "Gene_045": "UNC13C",
+      "Gene_046": "GRIK3",
+      "Gene_047": "HRNR",
+      "Gene_048": "NFASC",
+      "Gene_049": "SALL1",
+      "Gene_050": "FBXW7",
+      "Gene_051": "SCN3A",
+      "Gene_052": "TP53",
+      "Gene_053": "PCDHA9",
+      "Gene_054": "PCDH10",
+      "Gene_055": "GRIA4",
+      "Gene_056": "PLXNA4",
+      "Gene_057": "SMAD4",
+      "Gene_058": "KCNQ3",
+      "Gene_059": "SCN2A",
+      "Gene_060": "RIMS2",
+      "Gene_061": "ADAMTS16",
+      "Gene_062": "TSHZ2",
+      "Gene_063": "MAP2",
+      "Gene_064": "TENM4",
+      "Gene_065": "COL11A1",
+      "Gene_066": "PCDHA12",
+      "Gene_067": "COL4A1",
+      "Gene_068": "ADGRB1",
+      "Gene_069": "THSD7B",
+      "Gene_070": "MAGI2",
+      "Gene_071": "PCDH11X",
+      "Gene_072": "CNTNAP2",
+      "Gene_073": "DCLK1",
+      "Gene_074": "ERBB4",
+      "Gene_075": "PCDHA2",
+      "Gene_076": "CACNA1H",
+      "Gene_077": "ERICH3",
+      "Gene_078": "PTPRS",
+      "Gene_079": "ANKRD30A",
+      "Gene_080": "GRM1",
+      "Gene_081": "NRXN2",
+      "Gene_082": "DCC",
+      "Gene_083": "COL1A2",
+      "Gene_084": "ROBO2",
+      "Gene_085": "NALCN",
+      "Gene_086": "EYS",
+      "Gene_087": "AMER1",
+      "Gene_088": "KRAS",
+      "Gene_089": "PCDH9",
+      "Gene_090": "LAMA4",
+      "Gene_091": "CDH18",
+      "Gene_092": "EPHA5",
+      "Gene_093": "CDH22",
+      "Gene_094": "ZNF423",
+      "Gene_095": "UNC80",
+      "Gene_096": "EPHB1",
+      "Gene_097": "SPHKAP",
+      "Gene_098": "GRIK2",
+      "Gene_099": "CNTNAP5",
+      "Gene_100": "ADGRL2"
+    },
+    "approved_targets_in_set": [
+      {
+        "symbol": "KRAS",
+        "anon_id": "Gene_088",
+        "model_rank": 3
+      }
+    ],
+    "model_top20": [
+      {
+        "symbol": "APC",
+        "anon_id": "Gene_010",
+        "model_rank": 1
+      },
+      {
+        "symbol": "NALCN",
+        "anon_id": "Gene_085",
+        "model_rank": 2
+      },
+      {
+        "symbol": "KRAS",
+        "anon_id": "Gene_088",
+        "model_rank": 3
+      },
+      {
+        "symbol": "TP53",
+        "anon_id": "Gene_052",
+        "model_rank": 4
+      },
+      {
+        "symbol": "SCN1A",
+        "anon_id": "Gene_016",
+        "model_rank": 5
+      },
+      {
+        "symbol": "PIK3CA",
+        "anon_id": "Gene_036",
+        "model_rank": 6
+      },
+      {
+        "symbol": "SMAD4",
+        "anon_id": "Gene_057",
+        "model_rank": 7
+      },
+      {
+        "symbol": "PCDH17",
+        "anon_id": "Gene_043",
+        "model_rank": 8
+      },
+      {
+        "symbol": "GRIA4",
+        "anon_id": "Gene_055",
+        "model_rank": 9
+      },
+      {
+        "symbol": "GRIA1",
+        "anon_id": "Gene_029",
+        "model_rank": 10
+      },
+      {
+        "symbol": "PTPRT",
+        "anon_id": "Gene_009",
+        "model_rank": 11
+      },
+      {
+        "symbol": "GRIA2",
+        "anon_id": "Gene_031",
+        "model_rank": 12
+      },
+      {
+        "symbol": "NRXN1",
+        "anon_id": "Gene_019",
+        "model_rank": 13
+      },
+      {
+        "symbol": "FBXW7",
+        "anon_id": "Gene_050",
+        "model_rank": 14
+      },
+      {
+        "symbol": "GRIK2",
+        "anon_id": "Gene_098",
+        "model_rank": 15
+      },
+      {
+        "symbol": "SCN9A",
+        "anon_id": "Gene_026",
+        "model_rank": 16
+      },
+      {
+        "symbol": "ADGRB3",
+        "anon_id": "Gene_040",
+        "model_rank": 17
+      },
+      {
+        "symbol": "PCDHA9",
+        "anon_id": "Gene_053",
+        "model_rank": 18
+      },
+      {
+        "symbol": "NRAS",
+        "anon_id": "Gene_011",
+        "model_rank": 19
+      },
+      {
+        "symbol": "GRIK3",
+        "anon_id": "Gene_046",
+        "model_rank": 20
+      }
+    ],
+    "n_candidates": 100,
+    "n_sig_genes": 300
+  }
+}
