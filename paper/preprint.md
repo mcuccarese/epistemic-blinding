@@ -8,21 +8,23 @@ April 2026
 
 ## Abstract
 
-We built an agentic system that uses large language models to reason across multiple biological datasets for drug target prioritization. During development, we discovered that the LLM's outputs silently blend data-driven inference with memorized priors about named entities — and the blend is invisible: there is no way to determine, from a single output, how much came from the data on the page and how much came from the model's training memory. To address this, we introduce *epistemic blinding*, a simple inference-time protocol that replaces entity identifiers with anonymous codes before prompting, then compares outputs against an unblinded control. The protocol does not make LLM reasoning deterministic, but it restores one critical axis of auditability: measuring how much of an output came from the supplied data versus the model's parametric knowledge. In our original domain — oncology drug target prioritization across four cancer types — blinding changes 16% of top-20 predictions while preserving identical recovery of validated targets. The known biology is the same, but the discovery frontier shifts from literature-derived to data-driven nominations. Recognizing that this problem is not specific to biology, we generalized the protocol into an open-source, model-agnostic tool and tested it on S&P 500 equity screening, where brand-recognition bias reshapes 30–40% of top-20 rankings across five random seeds. We do not claim that blinded analysis produces better results. We claim that without blinding, there is no way to know to what degree the agent is adhering to the analytical process you designed.
+We built an agentic system that uses large language models to reason across multiple biological datasets for drug target prioritization. During development, we discovered that LLM outputs silently blend data-driven inference with memorized priors about named entities — and the blend is invisible: there is no way to determine, from a single output, how much came from the data on the page and how much came from the model's training memory. To address this, we introduce *epistemic blinding*, a simple inference-time protocol that replaces entity identifiers with anonymous codes before prompting, then compares outputs against an unblinded control. The protocol does not make LLM reasoning deterministic, but it restores one critical axis of auditability: measuring how much of an output came from the supplied data versus the model's parametric knowledge. We describe the complete target identification system in which epistemic blinding was developed — including LLM-guided evolutionary optimization of scoring functions and blinded agentic reasoning for target rationalization — and demonstrate that both stages operate without access to entity identity. In oncology drug target prioritization across four cancer types, blinding changes 16% of top-20 predictions while preserving identical recovery of validated targets. We then show that the contamination problem generalizes beyond biology: in S&P 500 equity screening, brand-recognition bias reshapes 30–40% of top-20 rankings across five random seeds. To lower the barrier to adoption, we release the protocol as an open-source tool and as a Claude Code skill that enables one-command epistemic blinding within agentic workflows. We do not claim that blinded analysis produces better results. We claim that without blinding, there is no way to know to what degree the agent is adhering to the analytical process you designed.
 
 ## 1. Introduction
 
 Consider a concrete example. An LLM is given a table of 100 genes with quantitative features for colorectal cancer and asked to rank the top 20 drug targets. When the gene names are visible, the model ranks KRAS at position #1 and justifies the choice by citing "proven therapeutic tractability via covalent RAS inhibitors." When the identical features are presented with anonymous labels, the gene corresponding to KRAS — now labeled Gene\_088 — is ranked #5, below genes with higher mutation frequencies and stronger convergence signals. The phrase "proven therapeutic tractability via covalent RAS inhibitors" does not appear anywhere in the provided data. It comes from the model's training corpus.
 
-This is not a failure of the model. It is a failure of the experimental design. The model was asked to perform data-driven inference but was simultaneously given access to its parametric knowledge about the entities in question. The two signals — data and memory — are entangled in the output with no means to distinguish them.
+This example illustrates a general problem we encountered while building a computational target identification system for oncology. The past decade has produced a rapidly growing set of publicly accessible, uniform data layers for drug discovery — genome-wide association studies, CRISPR essentiality screens, protein foundation model embeddings, single-cell transcriptomics, and more. The opportunity to deploy modern machine learning methods across these modalities to discover novel therapeutic targets is well understood [12, 13]. Large language models offer two specific advantages in this context. First, they can reason across heterogeneous data layers, integrating signals that span different biological modalities. Second, for well-defined optimization objectives, LLMs can serve as mutation operators in evolutionary frameworks, rapidly improving scoring functions without manual feature engineering.
 
-We call this *parametric knowledge contamination* and introduce *epistemic blinding* as a protocol to detect and measure it. The idea is conceptually identical to blinding in clinical trials: prevent the analyst from accessing information that could bias the analysis. Here, the analyst is an LLM, and the blinding is achieved through string replacement at the prompt level.
+However, both of these functions are contaminated by a shared failure mode: *parametric knowledge contamination*. When an LLM encounters a named entity during reasoning or code generation, it activates everything it memorized about that entity during pretraining. For drug target prioritization, this means the model has absorbed strong priors about which genes are "important" in which cancers — and these priors silently influence outputs that are supposed to be data-driven. The same problem applies whenever LLMs reason over named entities with uneven representation in the training corpus: equities, legal cases, research papers, candidate catalysts, job applicants.
+
+We call our solution *epistemic blinding*, by analogy to blinding in clinical trials: prevent the analyst from accessing information that could bias the analysis. Here, the analyst is an LLM, and the blinding is achieved through string replacement at the prompt level.
 
 **Why this matters beyond accuracy.** The natural question is whether blinded or unblinded analysis produces "better" results. We deliberately resist this framing. In some cases, training priors are genuinely informative — a model that knows KRAS is druggable is incorporating real-world knowledge that might improve a recommendation. In other cases, those same priors mask data-driven candidates that could represent novel biology. The point of epistemic blinding is not to suppress the model's knowledge. It is to make the *influence* of that knowledge visible and measurable — to restore an axis of auditability that is otherwise absent.
 
 When we write traditional software, every step is traceable. We can follow a data point from input through every transformation to output and verify that the logic matches our intent. LLM-based analysis breaks this: the model's reasoning is a black box in which supplied data and memorized knowledge are mixed without attribution. Epistemic blinding does not make agentic reasoning deterministic. But it brings back something we expect from deterministic code: the ability to audit whether the tool is operating on the inputs we gave it, or on something else entirely.
 
-**Contributions.** This work originated in a specific need — building an agentic system for multi-dataset biological reasoning without prior contamination — and generalized into a domain-agnostic protocol. We present (1) a formal description of epistemic blinding, including treatment of cross-dataset consistency and subtle leak sources; (2) an open-source, config-driven implementation that works with any LLM; (3) a controlled experiment in oncology drug target prioritization, the domain that motivated the work, showing systematic fame bias across four cancer types; and (4) a replication in S&P 500 equity screening demonstrating that the same phenomenon — and the same fix — transfers across domains.
+**Contributions.** This work originated in a specific need — building an agentic system for multi-dataset biological reasoning without prior contamination — and generalized into a domain-agnostic protocol. We present (1) a formal description of epistemic blinding, including treatment of cross-dataset consistency and subtle leak sources; (2) an open-source, config-driven implementation that works with any LLM; (3) a complete target identification system in which epistemic blinding is applied to both evolutionary optimization and agentic reasoning; (4) a controlled experiment showing systematic fame bias across four cancer types; and (5) a demonstration in S&P 500 equity screening showing that the same contamination problem — and the same fix — transfers to an unrelated domain.
 
 ## 2. Related Work
 
@@ -36,7 +38,7 @@ When we write traditional software, every step is traceable. We can follow a dat
 
 **LLMs for biological analysis.** Hu et al. [7] used GPT-4 for gene set function discovery with blinded *human* evaluation of the LLM's outputs. Notably, they did not blind the LLM itself — the model received real gene names and could draw on its training knowledge. Our work completes this design by blinding both sides.
 
-## 3. Method
+## 3. Method: Epistemic Blinding
 
 ### 3.1 Protocol
 
@@ -80,37 +82,64 @@ We release an open-source, config-driven tool (github.com/mcuccarese/epistemic-b
 
 The tool is model-agnostic: it operates on prompt text, not API internals. It has also been implemented as a Claude Code skill, enabling one-command blinding within an agentic coding workflow.
 
-## 4. Case Study: Oncology Drug Target Prioritization
+## 4. Application: Target Identification for Oncology
 
-### 4.1 Task and Data
+We developed epistemic blinding in the context of a computational target identification system for oncology. The system has two stages: (1) a deterministic scoring function, evolved by an LLM-guided process, that ranks all human genes by their likelihood of being viable drug targets; and (2) a blinded LLM reasoning step that rationalizes and refines the top candidates. Both stages operate without access to gene identity.
 
-We tested epistemic blinding on the task of ranking the top 20 most promising drug targets for a given cancer indication, given quantitative features derived from patient tumor sequencing and experimental biology.
+### 4.1 Data Assembly
 
-**The convergence hypothesis.** Our features are derived from a biological premise: a gene is a promising drug target when independent experimental evidence converges on the same molecular neighborhood. Concretely, if a gene's protein structure neighbors (ESM2 [8]), transcriptomic co-expression partners (Geneformer [9]), and functional domain relatives (ProtT5 [10]) are all enriched for somatically mutated genes in a given cancer, that gene sits at a biological hub for that disease.
+The system integrates eight publicly accessible data layers, each selected for a single property: it measures biology without requiring prior knowledge of what the answer should be.
 
-**Data sources.** Somatic mutation data from the cBioPortal TCGA PanCancer Atlas [12] (~1M mutations, 14 cancer studies) at molecular subtype resolution. Experimental neighbor graphs from three independent foundation models trained by different groups on different data modalities. Genetic constraint from gnomAD v4.1 pLI scores.
+**Included sources.** Somatic mutation data from the cBioPortal TCGA PanCancer Atlas [12] (~1M mutations, 14 cancer studies) at molecular subtype resolution. GWAS associations from Open Targets [14]. Protein structure embeddings from ESM2 [8], transcriptomic embeddings from Geneformer [9], and protein function embeddings from ProtT5 [10]. Genetic constraint from gnomAD v4.1 pLI scores. For each gene in a given disease, we computed convergence enrichment: the overlap between a gene's experimental neighbors (in each embedding space) and the set of significantly mutated genes, normalized by chance expectation.
 
-**Feature set.** Each gene is characterized by seven numerical features:
+**Deliberate exclusions.** Literature-mined gene–disease relationships, pre-annotated single-cell atlases with canonical marker genes, and expert-curated pathway databases beyond Gene Ontology were excluded from input features. These sources encode prior beliefs of the research community and would re-inject the same publication bias that epistemic blinding is designed to remove. Each included source was accompanied by a context card documenting its strengths, known biases, and failure modes [11].
 
-| Feature | Description |
-|---|---|
-| mut\_freq | Somatic mutation frequency (0–1) |
-| is\_mutated | Binary: exceeds significance threshold |
-| pLI | Probability of loss-of-function intolerance (0–1) |
-| esm2\_enrichment | Protein structure neighbor enrichment (fold over chance) |
-| geneformer\_enrichment | Transcriptomic neighbor enrichment (fold over chance) |
-| prottrans\_enrichment | Protein function domain enrichment (fold over chance) |
-| n\_neighbors | Total neighbors across all three modalities |
+**Feature set.** Each gene is characterized by seven numerical features per disease: somatic mutation frequency, binary mutation significance, pLI (loss-of-function intolerance), convergence enrichment from each of the three foundation models, and total neighbor count. These features are purely quantitative — a gene's enrichment of 15.4 carries the same information whether the gene is labeled SCN1A or Gene\_016.
 
-These features are purely quantitative — a gene's enrichment of 15.4 carries the same information whether the gene is labeled SCN1A or Gene\_016.
+### 4.2 Evolutionary Optimization of Scoring Functions
 
-**Unbiased data assembly.** Because blinding removes identity-based bias at the reasoning stage, we also addressed bias at the data stage. Literature-mined gene–disease relationships, pre-annotated single-cell atlases with canonical marker genes, and expert-curated pathway databases were deliberately excluded from the feature set. Each included source was selected for a single property: it measures biology without requiring prior knowledge of what the answer should be. Every source was accompanied by a context card documenting its strengths, known biases, and failure modes [11].
+Before applying epistemic blinding to LLM *reasoning*, we applied it structurally to LLM-guided *optimization*. We used ShinkaEvolve, an evolutionary framework in which an LLM (Claude Sonnet) serves as the mutation operator, to evolve scoring functions that rank genes by their likelihood of being validated drug targets.
 
-**Validation labels.** FDA-approved drug targets were curated at mechanism-of-action granularity for post-hoc evaluation. These labels were withheld from the LLM.
+**Blinding by design.** The scoring functions operate exclusively on a 22-dimensional numerical feature vector — indexed by position (feature 0 through feature 21), never by gene symbol. The LLM's role is to propose improved Python code that transforms this numerical array into a scalar score. At no point during evolution does the LLM see gene names, disease names, or any identifier that could activate training priors about specific targets. Gene symbols are mapped back from Ensembl IDs only after ranking, for human reporting.
 
-### 4.2 Experimental Design
+**Fitness function.** For each of 18 diseases (15 oncology at molecular subtype resolution, 3 non-oncology from GWAS), score all ~20,000 human genes, rank by score, and compute the mean percentile of FDA-approved drug targets among non-targets. Secondary metric: strict hit rate (fraction of diseases with at least one approved target in the top 20).
 
-For each of four oncology indications spanning a range of feature signal strength, we selected the top 100 candidate genes using a deterministic scoring function that operates solely on the numerical features (sigmoid-gated convergence, mutation frequency, and constraint) — no gene names or identities enter the selection. The candidates were shuffled to remove positional cues. Matched blinded and unblinded prompts were presented to Claude (Anthropic) in fresh sessions with instructions to rank the top 20 targets based exclusively on the provided features.
+**Evolution trace.** The optimization ran for 13 generations, producing 53 candidate scoring functions (**Figure 5**). Key transitions:
+
+- **Generation 0 (baseline).** Naive max-of-3 enrichment: `score = max(esm2, geneformer, prottrans)`. Ignores all disease context and gene properties. Fitness: 68%.
+
+- **Generation 3 (geometric mean).** Discovered that geometric mean of enrichments naturally rewards multi-modality convergence — a gene high in all three modalities scores higher than one extreme in one. Fitness: 77%.
+
+    ```
+    score = (esm2_enrich * gf_enrich * pt_enrich) ^ (1/3)
+    ```
+
+- **Generation 6 (sigmoid gates).** Enrichment ratios are unreliable when a modality has fewer than ~5 neighbors. Per-modality sigmoid gates suppress spurious high enrichment from low-powered modalities. Fitness: 82%.
+
+    ```
+    gate = 1 / (1 + exp(-0.5 * (n_neighbors - 5)))
+    gated_enrichment = enrichment * gate
+    ```
+
+- **Generation 9 (disease routing).** Oncology (somatic mutations) and non-oncology (GWAS) require fundamentally different evidence streams. The model created parallel scoring branches with disease-type-specific gates.
+
+- **Generation 12 (evidence-first hierarchy).** The major conceptual breakthrough: drug targets cluster into two natural tiers. **Tier 1** genes have direct genetic evidence (significantly mutated or GWAS-hit); they receive a large base score (8.0) with convergence and constraint as tiebreakers. **Tier 2** genes sit in the pathway neighborhood of Tier 1 genes; they receive a lower base score (3.0) gated by convergence alone. This captures both directly mutated targets (BRAF, KRAS) and their pathway neighbors (MEK, RAF1) — a distinction the LLM discovered without ever seeing a gene name. Strict hit rate: 10/18 diseases with at least one approved target in the top 20.
+
+    ```
+    tier1 = is_mutated * mutation_gate
+    score = tier1 * 8.0              # evidence-first base
+          + tier1 * convergence * 2.0  # convergence tiebreaker
+          + tier1 * pLI * 1.5          # constraint tiebreaker
+          + (1 - tier1) * conv * 0.3   # tier 2 baseline
+    ```
+
+The entire trajectory — from naive enrichment to a hierarchical, disease-context-aware scoring system — was discovered by an LLM operating on blinded numerical features. No gene name, disease name, or drug name was visible at any point during optimization.
+
+### 4.3 Blinded LLM Reasoning for Target Prioritization
+
+With the evolved scoring function providing a ranked candidate list, we applied epistemic blinding to the second stage: LLM reasoning over the top candidates. For each of four oncology indications spanning a range of feature signal strength, we selected the top 100 candidate genes using the deterministic scoring function (Section 4.2) — no gene names or identities enter the selection — and shuffled them to remove positional cues.
+
+Matched blinded and unblinded prompts were presented to Claude (Anthropic) in fresh sessions with instructions to rank the top 20 targets based exclusively on the provided features.
 
 | Indication | Sig. mutated genes | Approved targets | Signal strength |
 |---|---|---|---|
@@ -119,16 +148,16 @@ For each of four oncology indications spanning a range of feature signal strengt
 | Chromosomally unstable CRC | 300 | 1 | Moderate |
 | IDH-wildtype glioblastoma | 110 | 3 | Weak |
 
-### 4.3 Results
+### 4.4 Results
 
 **Aggregate.** Average set overlap between blinded and unblinded top-20 lists was 84%, meaning blinding changes 16% of the top-20 predictions. Critically, target recovery was identical in both conditions across all four indications (average 2.75 approved targets per indication). Blinding does not degrade recovery of validated biology — it changes which *novel* candidates are nominated.
 
 | Indication | Overlap | Only in Blinded | Only in Unblinded | Targets (B/U) |
 |---|---|---|---|---|
-| AML | 90% | DROSHA, SLIT2 | CEBPA, RAD21 | 6/6 |
-| Pancreatic | 80% | ADAMTS12, ADAMTS16, COL5A1, PCDH9 | ACVR2A, ATM, GLI3, HDAC4 | 1/1 |
-| CRC | 90% | GRIA1, MMP16 | SOX9, TCF7L2 | 1/1 |
-| GBM | 75% | COL1A1, COL28A1, COL3A1, DSG3, SCN9A | PDGFRA, PIK3CB, PIK3R1, RB1, SETD2 | 3/3 |
+| AML | 90% | 2 | 2 | 6/6 |
+| Pancreatic | 80% | 4 | 4 | 1/1 |
+| CRC | 90% | 2 | 2 | 1/1 |
+| GBM | 75% | 5 | 5 | 3/3 |
 
 **Fame bias.** The direction of change is systematic (**Figure 3**). Well-known genes are promoted when named, and obscure genes with strong features are demoted:
 
@@ -145,7 +174,7 @@ DPP8 had the strongest convergence signal in the entire GBM gene set and ranked 
 
 **Contamination scales with feature ambiguity.** The relationship between signal strength and contamination is consistent and predictive. AML (strong signal, few drivers) shows 90% overlap. GBM (weak signal, many genes at similar low frequencies) shows 75% overlap and produces the largest single shift (PTEN, −12 ranks). When features clearly differentiate candidates, the model follows the data. When features are ambiguous, the model fills the gap with training knowledge.
 
-### 4.4 The Smoking Gun: Justifications Reveal the Mechanism
+### 4.5 The Smoking Gun: Justifications Reveal the Mechanism
 
 The most direct evidence of contamination comes from the model's own justifications (**Figure 2**). When blinded:
 
@@ -157,22 +186,21 @@ When unblinded:
 
 The phrase "proven therapeutic tractability via covalent RAS inhibitors" is not derivable from any provided feature. It is parametric knowledge, injected into what was requested to be data-driven analysis. This is not an edge case — it is the mechanism operating in plain sight.
 
-## 5. Case Study: S&P 500 Value Screening
+## 5. Beyond Biology: S&P 500 Value Screening
 
-To test whether epistemic blinding generalizes beyond biology, we applied the protocol to equity analysis. An LLM was asked to rank the 20 most attractive value investments from ~500 S&P 500 companies, given four layers of fundamentals: valuation (P/E, P/S, P/B, EV/EBITDA, PEG, FCF yield), growth (revenue, earnings), quality (margins, ROE, ROA, leverage), and shareholder returns (dividend yield). The system prompt instructed the model to rank strictly by the provided data.
+The contamination problem described above is not specific to genomics. Any domain where LLMs reason over named entities with uneven training-corpus representation will exhibit the same phenomenon. To demonstrate this, we applied epistemic blinding to a deliberately different domain: equity analysis.
 
-Because market capitalization and sector together can identify most mega-cap stocks, all features were presented as normalized values. Ticker symbols were the only entity column blinded.
+An LLM was asked to rank the 20 most attractive value investments from ~500 S&P 500 companies, given four layers of fundamentals: valuation (P/E, P/S, P/B, EV/EBITDA, PEG, FCF yield), growth (revenue, earnings), quality (margins, ROE, ROA, leverage), and shareholder returns (dividend yield). The system prompt instructed the model to rank strictly by the provided data. Because market capitalization and sector together can identify most mega-cap stocks, all features were presented as normalized values. Ticker symbols were the only entity column blinded.
 
-We ran five independent seeds (42, 137, 256, 389, 501) to estimate variance. Results:
+We ran five independent seeds (42, 137, 256, 389, 501) to estimate variance:
 
 | Metric | Mean ± SD | Range |
 |---|---|---|
 | Top-20 overlap | 13.0 ± 1.0 | 12–14 |
 | Jaccard index | 0.48 ± 0.06 | 0.43–0.54 |
 | Mean rank delta (shared) | 3.1 ± 1.1 | 1.9–4.4 |
-| Kendall tau | 0.52 ± 0.17 | 0.28–0.67 |
 
-On average, 7 of the top 20 change when tickers are revealed — a 35% reshaping of the recommendation, larger than the biology case. The effect is systematic (**Figure 4**): tickers like ELV and CI were promoted when unblinded in 4 of 5 runs, while tickers like CTRA were demoted in 4 of 5 runs. The model is not randomly noisy — it is consistently biased by brand recognition.
+On average, 7 of the top 20 change when tickers are revealed — a 35% reshaping of the recommendation. The effect is systematic (**Figure 4**): tickers like ELV and CI were promoted when unblinded in 4 of 5 runs, while CTRA was demoted in 3 of 5 runs. This is not a claim about equity analysis methodology. It is a demonstration that the same contamination mechanism — LLM priors overriding supplied data — operates identically in a domain with no biological content whatsoever.
 
 ## 6. Discussion
 
@@ -205,11 +233,17 @@ Three conditions should hold: (1) the data contains decision-relevant signal, (2
 3. **No ground truth for novel candidates.** We can measure that the discovery frontier shifts under blinding, but cannot determine which frontier is "better" without prospective experimental validation.
 4. **Run-to-run variance.** LLM outputs are stochastic. While the S&P 500 experiment used five seeds to estimate variance, the oncology experiment used single runs per indication.
 
-## 8. Conclusion
+## 8. Practical Adoption: A Claude Code Skill
+
+A protocol is only useful if practitioners can apply it without friction. To this end, we implemented epistemic blinding as a Claude Code skill — a modular capability that integrates directly into agentic coding workflows. When a user asks an LLM-based coding assistant to rank, score, or prioritize named entities from a dataset, the skill activates automatically: it reads the data, identifies entity columns, generates a YAML configuration, produces matched blinded and unblinded prompts, and runs the A/B comparison — all within a single conversational turn. The user does not need to write configuration files or run scripts manually.
+
+This matters because the primary barrier to epistemic blinding is not conceptual complexity but operational overhead. The protocol is trivially simple in principle — string replacement — but in practice, analysts working within agentic workflows will not pause to anonymize their data, run a parallel session, and compare outputs unless the tooling makes it effortless. By embedding the protocol as a skill that activates contextually, we aim to make blinding a default step in LLM-assisted data analysis rather than an afterthought.
+
+## 9. Conclusion
 
 Revealing entity identifiers to an LLM during data-driven analysis systematically biases its outputs toward well-known entities and away from conclusions supported by the data alone. The intervention to detect this — epistemic blinding — is trivially simple, requires no model modification, and preserves the model's analytical reasoning capabilities.
 
-In oncology, blinding changed 16% of top-20 drug target predictions while maintaining identical recovery of validated targets. In equity analysis, blinding changed 35% of top-20 value rankings. In both domains, the direction of bias was systematic: famous entities were promoted, obscure entities with strong features were demoted.
+We have shown that epistemic blinding can be applied at multiple stages of a computational pipeline: structurally, by designing optimization processes that operate on numerical features rather than named entities; and diagnostically, by comparing blinded and unblinded LLM outputs to quantify prior contamination. In oncology, blinding changed 16% of top-20 drug target predictions while maintaining identical recovery of validated targets. In equity analysis, blinding changed 35% of top-20 value rankings. In both domains, the direction of bias was systematic: famous entities were promoted, obscure entities with strong features were demoted.
 
 We propose that epistemic blinding should become standard practice whenever LLMs are used for data-driven analysis of named entities. Not because blinded results are necessarily better — but because without blinding, the analyst has no way to know whether the agent is reasoning from the data they provided or from something it memorized long before the conversation began.
 
@@ -243,12 +277,18 @@ We propose that epistemic blinding should become standard practice whenever LLMs
 
 [12] Hoadley, K.A. et al. "Cell-of-origin patterns dominate the molecular classification of 10,000 tumors from 33 types of cancer." Cell 173, 291–304 (2018).
 
+[13] Boiko, D.A. et al. "Autonomous chemical research with large language models." Nature 624, 570–578 (2023).
+
+[14] Ochoa, D. et al. "The next-generation Open Targets Platform." Nucleic Acids Research 51, D1353–D1359 (2023).
+
 ---
 
-**Figure 1.** Traditional vs. epistemic blinding workflow. Both approaches receive identical quantitative features and recover identical numbers of validated drug targets. The critical difference is in which novel candidates are surfaced: the unblinded workflow promotes literature-familiar genes while the blinded workflow ranks purely on feature strength.
+**Figure 1.** Traditional vs. epistemic blinding workflow. Both approaches receive identical quantitative features and recover identical numbers of validated drug targets. The critical difference is in which novel candidates are surfaced.
 
-**Figure 2.** (Table) Side-by-side LLM justifications for KRAS / Gene\_088 in colorectal cancer. The blinded justification references only provided features. The unblinded justification injects training knowledge ("proven therapeutic tractability via covalent RAS inhibitors") not present in any supplied data. Same gene, same features, different rank (#5 vs. #1), different reasoning.
+**Figure 2.** (Table) Side-by-side LLM justifications for KRAS / Gene\_088 in colorectal cancer. The blinded justification references only provided features. The unblinded justification injects training knowledge not present in any supplied data.
 
-**Figure 3.** Rank-shift slope chart for IDH-wildtype glioblastoma. Lines connect the same gene's rank in the blinded (left) and unblinded (right) conditions. Orange lines show famous genes promoted when named (e.g., PTEN: #15 to #3). Blue lines show obscure genes with strong features demoted when named (e.g., DPP8: #3 to #9).
+**Figure 3.** Rank-shift slope chart for IDH-wildtype glioblastoma. Lines connect the same gene's rank in the blinded (left) and unblinded (right) conditions. Orange: famous genes promoted when named. Blue: obscure genes with strong features demoted when named.
 
-**Figure 4.** S&P 500 value screen consistency across five random seeds. Each seed produces a different anonymization mapping. Tickers that are consistently promoted (orange up-arrows) or demoted (blue down-arrows) across seeds represent systematic bias, not stochastic noise.
+**Figure 4.** S&P 500 value screen consistency across five random seeds. Consistent arrows indicate systematic bias, not stochastic noise.
+
+**Figure 5.** ShinkaEvolve evolution trace across 13 generations. The LLM mutation operator, operating on blinded numerical features, discovered multi-modality convergence, sigmoid reliability gates, disease-context routing, and a hierarchical evidence-first scoring system — without ever seeing a gene name.
